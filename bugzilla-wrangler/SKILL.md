@@ -7,7 +7,9 @@ description: Support deep dive analysis of Bugzilla reports within specific Prod
 
 ## Goal
 
-Discover and surface recurring themes in user-reported Firefox bugs. Connect disparate reports to shared themes, build timelines, assign signal strength, and present actionable findings.
+Discover and surface recurring themes within bug data in your Products and Components. Connect disparate reports to shared themes, build timelines, assign signal strength, and present actionable findings.
+
+The core logic of weighting is covered in Signal Scoring. You can tweak the ranking system there to alter what you find. Currently we're finding major and minor themes buried in the noise of bugzilla. The tool will surface existing issues, and for more current date ranges, emerging themes that haven't yet been widely recognized.
 
 ---
 
@@ -15,7 +17,7 @@ Discover and surface recurring themes in user-reported Firefox bugs. Connect dis
 
 At invocation, resolve these two settings before doing anything else. State both in the Session Info section of the report.
 
-**Scope profile** — If the user specified a platform or topic (e.g. "android", "web-conferencing", "graphics"), use that profile from the Scope Profiles section below. Otherwise use `media`.
+**Scope profile** — If the user passed a `custom:` prefix (e.g. `custom:Core::Audio/Video, Firefox for Android::Media`), parse the value as described in the `custom` scope profile below. Otherwise, if the user specified a named platform or topic (e.g. "android", "web-conferencing", "graphics"), use that profile from the Scope Profiles section. If neither, use `media`.
 
 **Seed date window** — If the user specified a date range (e.g. "Q1 2025", "last 90 days", "January through March 2026"), parse it into an explicit `YYYY-MM-DD` lower bound and upper bound and use those in Step 1. Otherwise use a default window from the last three months.
 
@@ -51,7 +53,18 @@ At invocation, check whether the user specified a platform or topic (e.g. "andro
 - **Product:** Web Compatibility
 - **Components:**  Site Reports, Knowledge Base
 
-Always exclude bugs belonging to core security groups.
+### custom
+Defined inline at invocation. The value is a comma-separated list of `Product::Component` pairs. Both `::` and `:` are accepted as the product/component delimiter (e.g. `Core::Audio/Video` or `Core:Audio/Video`). Example invocation:
+
+    /bugzilla-wrangler custom:Core::Audio/Video, Core::WebRTC: Signaling, Firefox for Android::Media
+
+Parsing rules:
+- Split the value on `,` to get individual pairs.
+- For each pair, split on the first occurrence of `::` or `:` to separate the product (left side) from the component (right side). Strip whitespace from both sides.
+- If a pair contains no delimiter, treat the whole string as a component under `Core` and emit a visible warning in Session Info.
+- Pairs whose product does not match a known Bugzilla product name should trigger a visible warning in Session Info before proceeding.
+
+The resolved product/component set is used identically to a named scope profile for all subsequent steps. Use `custom` as the scope name in cache filenames and report headers.
 
 ---
 
@@ -65,10 +78,18 @@ Always exclude bugs belonging to core security groups.
 
 ## Bugzilla Access Rules
 
-- **Cache first.** Before any API request, derive the cache filename from the active scope: `reports/wrangler_cache_<scope>.json` (e.g. `wrangler_cache_android.json`, `wrangler_cache_media.json`). If that file exists and was written in the current session, load from it. Write to it after every fetch so later steps can reuse the data. Never read or write a different scope's cache file.
+- **Cache policy.** Derive the cache filename from the active scope: `reports/wrangler_cache_<scope>.json` (e.g. `wrangler_cache_android.json`, `wrangler_cache_media.json`, `wrangler_cache_custom.json`). Never read or write a different scope's cache file.
+  - **Default date window (no user-specified range):** Always skip the cache on read — fetch fresh data from Bugzilla regardless of whether a cache file exists. Write the fresh results to the cache after every fetch so later steps within the same session can reuse the data.
+  - **User-specified date range:** Cache first. If the cache file exists and was written in the current session, load from it. Write to it after every fetch so later steps can reuse the data.
 - **Batch lookups.** Fetch multiple bugs in one request using `?id=A,B,C` rather than one request per bug.
 - **Request only needed fields.** Always include: `id, summary, component, severity, status, creation_time, last_change_time, keywords, depends_on, blocks, cc_count`
 - **Fetch `cc_count` separately if missing.** The field can be omitted by the API depending on visibility. If `cc_count` is absent after a batch fetch, retrieve it with a targeted request: `?id=A,B,C&include_fields=id,cc_count`. Always persist `cc_count` in the cache so signal scoring can use it without a second fetch.
+- Always exclude bugs belonging to core security groups.
+
+## Bug Filtering Rules
+
+- Filter intermittent test bugs (bugs with the keyword intermittent-failure) out of the seed lists.
+- Changes to bugs by release-mgmt-account-bot@mozilla.tld should be treated as questionably accurate.
 
 ---
 
@@ -78,9 +99,11 @@ Apply these rules when ranking themes. Higher-weight factors are listed first.
 
 | Factor | Effect |
 |--------|--------|
-| Bug status is NEW or ASSIGNED | Counts more than UNCONFIRMED (triage has validated it) |
+| Bug severity is S1 or S2 | Validated internally as a major issue. |
+| Bug priority is P1 or P2 | Validated internally as a priority to fix. |
 | Crash volume and trend | >1 000 reports in 30 days is a strong signal; a rising trend (comparing two 30-day windows via Socorro) elevates the theme regardless of other factors |
 | `regression` keyword present | Higher priority — represents a user-visible regression from a prior release |
+| Bug status is NEW or ASSIGNED | Counts more than UNCONFIRMED (triage has validated it) |
 | `cc_count` ≥ 10: moderate boost; `cc_count` ≥ 25: strong boost | Proxy for how many users are tracking the issue |
 | `comment_count` ≥ 15: moderate boost; `comment_count` ≥ 40: strong boost | Proxy for community demand and sustained engagement around the issue. Add `comment_count` to `include_fields`. |
 | Non-Mozilla commenter activity | A thread dominated by non-mozilla.com accounts signals direct end-user impact rather than internal triage noise; weight proportionally to the number of distinct non-Mozilla participants |
@@ -90,6 +113,30 @@ Apply these rules when ranking themes. Higher-weight factors are listed first.
 | Meta/tracking bug exists (`keywords=meta`) | Strong multiplier — use its total dependency count as a proxy for theme breadth |
 
 A theme requires at least 3 breadcrumbs to be included in the report.
+
+---
+
+## Bug Severity Definitions
+| Severity | Meaning |
+|----------|---------|
+| **S1**   | Catastrophic: Blocks development/testing, affects 25%+ users, data loss, no workaround |
+| **S2**   | Serious: Major functionality impaired, high impact, no satisfactory workaround |
+| **S3**   | Normal: Blocks non-critical functionality, workarounds in Firefox exist |
+| **S4**   | Small/Trivial: Minor significance, cosmetic, low user impact |
+| **N/A**  | Not Applicable: Task or Enhancement type bugs |
+| **--**   | Unknown: Not enough information, might be a meta bug, new untriaged, older or abandoned. Investigate. |
+
+---
+
+## Bug Priority Definitions
+| Priority | Meaning |
+|----------|---------|
+| **P1**   | Fix in current release cycle (critical) |
+| **P2**   | Fix in next release cycle or following |
+| **P3**   | Backlog (lower priority, address when resources allow) |
+| **P4**   | Won't fix, but accept patches (nice-to-have) |
+| **P5**   | Won't fix, but accept patches (nice-to-have) |
+| **--**   | Unknown: Not enough information, might be a meta bug, new untriaged, older or abandoned. Investigate. |
 
 ---
 
@@ -194,7 +241,7 @@ Apply the signal scoring rules to each theme. Rank themes by total signal. Disca
 
 ### Step 6 — Report
 
-Present findings in this structure:
+Present a short summary of the themes you've found. Save the full research report under "./reports". The filename format should be `wrangler-<scope>-<DATE>.md`. If the file already exists, we should not overwrite it, but instead create a new file with a suffix, like `wrangler-<scope>-<DATE>-2.md`, and so on.
 
 **Session Info:**
 - Date of report generation
@@ -202,7 +249,7 @@ Present findings in this structure:
 - Seed timeframe
 - Seed count — if fewer than 10, render as **"N (low)"** and include a callout box immediately below Session Info explaining the limitation and suggesting remedies (e.g. widen the date window, relax the severity filter)
 - Seed mode — `mixed-seed (<A> created + <B> changed = <total> unique)` or `creation-time-only (--no-mixed-seed)`
-- Cache freshness
+- Cache freshness — note whether data was fetched live (default window) or loaded from session cache (user-specified range)
 
 **Seed Info:**
 - A tight itemized list of the initial set of seed bugs (ID and summary), organized by
@@ -228,5 +275,3 @@ Present findings in this structure:
 - Use searchfox links for code references, for example - [MediaDecoderStateMachine.cpp](https://searchfox.org/mozilla-central/source/dom/media/MediaDecoderStateMachine.cpp)
 - When referencing crash signatures, link to Socorro search results for that signature, for example - [Crash Signature](https://crashes.mozilla.org/signatures?q=signature%3A%22%3Csignature%3E%22)
 - In tables that itemize bugs, if the bug is ASSIGNED include the assignee information. 
-
-Offer to save the research report under "./reports". The filename format should be `wrangler-<scope>-<DATE>.md`. If the file already exists, we should not overwrite it, but instead create a new file with a suffix, like `wrangler-<scope>-<DATE>-2.md`, and so on.
