@@ -38,50 +38,12 @@ Please provide a Bugzilla bug number to analyze (e.g., 1234567) and scope profil
 Example input: `1234567 scope:graphics`
 ```
 
-**Scope profile** — If the user passed a `custom:` prefix (e.g. `custom:Core::Audio/Video, Firefox for Android::Media`), parse the value as described in the `custom` scope profile below. Otherwise, if the user specified a named platform or topic (e.g. "android", "web-conferencing", "graphics"), use that profile from the Scope Profiles section. If neither, use `media`.
-
-## Scope Profiles
-
-At invocation, check whether the user specified a platform or topic (e.g. "android", "web-conferencing", "graphics"). If so, use the matching profile below. If not, use `media`.
-
-### media
-- **Product:** Core
-- **Components:** Audio/Video, Audio/Video: cubeb, Audio/Video: GMP, Audio/Video: MediaStreamGraph, Audio/Video: Playback, Audio/Video: Recording, Audio/Video: Web Codecs, Web Audio
-
-### android
-- **Product:** Firefox for Android
-- **Components:** Media
-- **Product:** GeckoView
-- **Components:** Media
-
-### web-conferencing
-- **Product:** Core
-- **Components:** WebRTC, WebRTC: Audio/Video, WebRTC: Networking, WebRTC: Signaling
-
-### media-and-web-conferencing
-- **Product:** Core
-- **Components:** Audio/Video, Audio/Video: cubeb, Audio/Video: GMP, Audio/Video: MediaStreamGraph, Audio/Video: Playback, Audio/Video: Recording, Audio/Video: Web Codecs, Web Audio, WebRTC, WebRTC: Audio/Video, WebRTC: Networking, WebRTC: Signaling
-
-### graphics
-- **Product:** Core
-- **Components:** Graphics, Graphics: WebRender, Graphics: CanvasWebGL, Graphics: Layers, Graphics: Text, Canvas: 2D, Layout: Painting, CSS Painting and Compositing
-
-### webcompat
-- **Product:** Web Compatibility
-- **Components:**  Site Reports, Knowledge Base
-
-### custom
-Defined inline at invocation. The value is a comma-separated list of `Product::Component` pairs. Both `::` and `:` are accepted as the product/component delimiter (e.g. `Core::Audio/Video` or `Core:Audio/Video`). Example invocation:
-
-    /bugzilla-wrangler custom:Core::Audio/Video, Core::WebRTC: Signaling, Firefox for Android::Media
-
-Parsing rules:
-- Split the value on `,` to get individual pairs.
-- For each pair, split on the first occurrence of `::` or `:` to separate the product (left side) from the component (right side). Strip whitespace from both sides.
-- If a pair contains no delimiter, treat the whole string as a component under `Core` and emit a visible warning in Session Info.
-- Pairs whose product does not match a known Bugzilla product name should trigger a visible warning in Session Info before proceeding.
-
-The resolved product/component set is used identically to a named scope profile for all subsequent steps. Use `custom` as the scope name in cache filenames and report headers.
+**Scope profile** — If the user specified a topic (e.g. "graphics", "web-conferencing", "android"), use that profile from the Scope Profiles section. If not specified, infer from the triage bug's component after fetching it:
+- Audio/Video components → `media`
+- WebRTC components → `web-conferencing`
+- Graphics components → `graphics`
+- GeckoView or Firefox for Android components → `android`
+- If the component spans multiple areas, use `media-and-web-conferencing` or ask the user.
 
 **Tips For Agents** - Input may include short suggestions Agents can act on. For example: 
 /media-bug-triage 2023481 media [agent tip: triage 2023379 as a part of your analysis.]

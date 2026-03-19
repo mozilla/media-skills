@@ -1,10 +1,15 @@
 
 **todo**
 
-- Site Reports::Product: Web Compatibility - high value data we should optionally encorporate? Relavent bugs should get picked up in
-    the crawl. Lets make sure that's happening.
+- Site Reports::Product: Web Compatibility - high value data we should optionally incorporate? Relevent bugs should get picked up in
+    the crawl. Let's make sure that's happening.
 - Themes - from here, how do we dive deeper?
     Facilitating the development of a software project around a theme.
+- Neither tool likely understands the differences between processes and metrixc like crash rate.
+- Github activity is a pretty big blind spot currently.
+
+**both skills**
+- Status table columns need standardization - | ASSIGNED S2 (padenot) | ? something like this.
 
 **Good Suggestions from Claude**
 

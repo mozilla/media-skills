@@ -5,11 +5,15 @@ description: Support deep dive analysis of Bugzilla reports within specific Prod
 
 # Bugzilla Wrangler Skill
 
-## Goal
-
 Discover and surface recurring themes within bug data in your Products and Components. Connect disparate reports to shared themes, build timelines, assign signal strength, and present actionable findings.
 
 The core logic of weighting is covered in Signal Scoring. You can tweak the ranking system there to alter what you find. Currently we're finding major and minor themes buried in the noise of bugzilla. The tool will surface existing issues, and for more current date ranges, emerging themes that haven't yet been widely recognized.
+
+Typical use:
+
+    /bugzilla-wrangler (media, last three months)
+    /bugzilla-wrangler web-conferencing date range:10-01-2025 to 03-18-2026
+    /bugzilla-wrangler custom:Core::Audio/Video, Core::WebRTC: Signaling, Firefox for Android::Media
 
 ---
 
