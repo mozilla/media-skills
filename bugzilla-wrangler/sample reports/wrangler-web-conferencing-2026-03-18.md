@@ -1,379 +1,337 @@
-# Bugzilla Wrangler Report: WebRTC / Web Conferencing
-**Generated:** 2026-03-18
-
----
+# WebRTC Wrangler Report
 
 ## Session Info
 
 | Field | Value |
-|---|---|
-| **Scope profile** | `web-conferencing` — Core: WebRTC, WebRTC: Audio/Video, WebRTC: Networking, WebRTC: Signaling |
-| **Seed timeframe** | 2025-12-18 to 2026-03-18 (last 3 months) |
-| **Seed count** | 45 unique |
-| **Seed mode** | mixed-seed (38 created + 7 changed = 45 unique) |
-| **Cache freshness** | Fresh — fetched this session (2026-03-18) |
+|-------|-------|
+| **Date Generated** | 2026-03-18 |
+| **Scope Profile** | `web-conferencing` — Core: WebRTC, WebRTC: Audio/Video, WebRTC: Networking, WebRTC: Signaling |
+| **Seed Timeframe** | 2025-10-01 → 2026-03-18 |
+| **Seed Count** | 43 (37 created + 6 changed = 43 unique) |
+| **Seed Mode** | mixed-seed (37 created + 6 changed = 43 unique) |
+| **Cache Freshness** | Fetched live (user-specified date range, no prior cache) |
 
 ---
 
 ## Seed Info
 
-### Seed Bug List (by priority)
+### Seed Bugs by Priority
 
 **P1**
-- [2014357](https://bugzilla.mozilla.org/show_bug.cgi?id=2014357) — Enable two byte RTP header extension ids (S2, NEW)
+- [2001200](https://bugzilla.mozilla.org/show_bug.cgi?id=2001200) — Enable connecting getUserMedia and MediaStreamTrackAudioSourceNode running at different rates *(ASSIGNED: cchang@mozilla.com)*
 
 **P2**
-- [2021379](https://bugzilla.mozilla.org/show_bug.cgi?id=2021379) — Crash in CamerasParent async shutdown (S2, NEW)
-- [2016455](https://bugzilla.mozilla.org/show_bug.cgi?id=2016455) — Crash in RTCDataChannel::AnnounceClosed cycle collector (S2, NEW)
-- [2015946](https://bugzilla.mozilla.org/show_bug.cgi?id=2015946) — Google Meet crash: WebRTC destroys connected PipeWire stream (S2, ASSIGNED)
-- [2023103](https://bugzilla.mozilla.org/show_bug.cgi?id=2023103) — Crash in abort|BuildFormat (S3, ASSIGNED)
-- [2018955](https://bugzilla.mozilla.org/show_bug.cgi?id=2018955) — WebRTC playout fails silently at 768 kHz on macOS (S3, NEW)
-- [2019330](https://bugzilla.mozilla.org/show_bug.cgi?id=2019330) — Implement RTCIceTransport.component (S2, NEW)
-- [2019331](https://bugzilla.mozilla.org/show_bug.cgi?id=2019331) — Implement RTCTransportStats.selectedCandidatePairId (S2, NEW)
-- [2019333](https://bugzilla.mozilla.org/show_bug.cgi?id=2019333) — Implement RTCTransportStats.remote/localCertificateId (S2, NEW)
-- [2019349](https://bugzilla.mozilla.org/show_bug.cgi?id=2019349) — Implement RTCTransportStats.bytesSent/bytesReceived (S2, NEW)
-- [2019355](https://bugzilla.mozilla.org/show_bug.cgi?id=2019355) — Implement RTCTransportStats.iceRole (S2, NEW)
-- [2019356](https://bugzilla.mozilla.org/show_bug.cgi?id=2019356) — Implement RTCTransportStats.dtlsState/dtlsRole (S2, NEW)
-- [2019359](https://bugzilla.mozilla.org/show_bug.cgi?id=2019359) — Implement RTCRtcpParameters.reducedSize (S2, NEW)
-- [2019389](https://bugzilla.mozilla.org/show_bug.cgi?id=2019389) — Implement RTCTransportStats.tlsVersion/dtlsCipher/srtpCipher (S2, NEW)
-- [2019375](https://bugzilla.mozilla.org/show_bug.cgi?id=2019375) — Get real h264 plugin working in wpt.fyi CI (S2, ASSIGNED)
-- [2021075](https://bugzilla.mozilla.org/show_bug.cgi?id=2021075) — Throw when RTCIceServer.credential is empty (S2, NEW)
-- [2019378](https://bugzilla.mozilla.org/show_bug.cgi?id=2019378) — Determine correctness of RTCSctpTransport-maxChannels.html (S2, NEW)
-- [2019361](https://bugzilla.mozilla.org/show_bug.cgi?id=2019361) — Determine correctness of RTCSctpTransport-events.html (S2, NEW)
-- [2019346](https://bugzilla.mozilla.org/show_bug.cgi?id=2019346) — Fix RTCPeerConnection-iceConnectionState.https.html failures (S2, NEW)
-- [2019370](https://bugzilla.mozilla.org/show_bug.cgi?id=2019370) — Disable setParameters compat mode in wpt (S2, NEW)
-- [2019365](https://bugzilla.mozilla.org/show_bug.cgi?id=2019365) — Fix RTCDataChannel-GC.html failure (S2, NEW)
-- [2019461](https://bugzilla.mozilla.org/show_bug.cgi?id=2019461) — Fix protocol/handover-datachannel.html (S2, NEW)
-- [2019469](https://bugzilla.mozilla.org/show_bug.cgi?id=2019469) — protocol/rtp-headerextensions.html recvonly extmap failure (S2, NEW)
-- [2019332](https://bugzilla.mozilla.org/show_bug.cgi?id=2019332) — Implement RTCIceTransport.getSelectedCandidatePair() (S2, NEW)
-- [1617686](https://bugzilla.mozilla.org/show_bug.cgi?id=1617686) — Validate ice-ufrag and ice-pwd for invalid characters (S2, ASSIGNED)
-- [2013936](https://bugzilla.mozilla.org/show_bug.cgi?id=2013936) — SDP with h264 profile_level_id > 5 crashes tab (S3, ASSIGNED)
-- [2010655](https://bugzilla.mozilla.org/show_bug.cgi?id=2010655) — script-metadata-transform.https.html times out on wpt.fyi (S3, NEW)
-- [1571470](https://bugzilla.mozilla.org/show_bug.cgi?id=1571470) — Support webrtc-svc (scalabilityMode) (S3, ASSIGNED)
+- [2021379](https://bugzilla.mozilla.org/show_bug.cgi?id=2021379) — Crash in [@ AsyncShutdownTimeout | profile-before-change | CamerasParent] (S2)
+- [2016455](https://bugzilla.mozilla.org/show_bug.cgi?id=2016455) — Crash in [@ NS_CycleCollectorSuspect3 | nsCycleCollectingAutoRefCnt::decr] (RTCDataChannel::AnnounceClosed) (S2)
+- [2010655](https://bugzilla.mozilla.org/show_bug.cgi?id=2010655) — script-metadata-transform.https.html times out on wpt.fyi
+- [2010661](https://bugzilla.mozilla.org/show_bug.cgi?id=2010661) — script-change-transform.https.html times out on wpt.fyi
+- [2010663](https://bugzilla.mozilla.org/show_bug.cgi?id=2010663) — script-write-twice-transform.https.html times out on wpt.fyi
+- [2010667](https://bugzilla.mozilla.org/show_bug.cgi?id=2010667) — RTCRtpScriptTransform-encoded-transform.https.html times out on wpt.fyi
+- [2018955](https://bugzilla.mozilla.org/show_bug.cgi?id=2018955) — WebRTC playout may fail silently when default output device operates at 768 kHz on macOS
+- [2019255](https://bugzilla.mozilla.org/show_bug.cgi?id=2019255) — WebRTC: TURN with TLS (turns) does not work with an IP with a valid certificate
+- [2019330](https://bugzilla.mozilla.org/show_bug.cgi?id=2019330) — Implement RTCIceTransport.component (S2)
+- [2019331](https://bugzilla.mozilla.org/show_bug.cgi?id=2019331) — Implement RTCTransportStats.selectedCandidatePairId (S2)
+- [2019333](https://bugzilla.mozilla.org/show_bug.cgi?id=2019333) — Implement RTCTransportStats.remote/localCertificateId (S2)
+- [2019349](https://bugzilla.mozilla.org/show_bug.cgi?id=2019349) — Implement RTCTransportStats.bytesSent/bytesReceived (S2)
+- [2019355](https://bugzilla.mozilla.org/show_bug.cgi?id=2019355) — Implement RTCTransportStats.iceRole (S2)
+- [2019356](https://bugzilla.mozilla.org/show_bug.cgi?id=2019356) — Implement RTCTransportStats.dtlsState/dtlsRole (S2)
+- [2019359](https://bugzilla.mozilla.org/show_bug.cgi?id=2019359) — Implement RTCRtcpParameters.reducedSize (S2)
+- [2019361](https://bugzilla.mozilla.org/show_bug.cgi?id=2019361) — Determine correctness of RTCSctpTransport-events.html (S2)
+- [2019370](https://bugzilla.mozilla.org/show_bug.cgi?id=2019370) — Disable setParameters compat mode in wpt (S2)
+- [2019375](https://bugzilla.mozilla.org/show_bug.cgi?id=2019375) — Get the real h264 plugin working in wpt.fyi CI tasks (S2, ASSIGNED: apehrson@mozilla.com)
+- [2019378](https://bugzilla.mozilla.org/show_bug.cgi?id=2019378) — Determine correctness of RTCSctpTransport-maxChannels.html (S2)
+- [2019389](https://bugzilla.mozilla.org/show_bug.cgi?id=2019389) — Implement RTCTransportStats.tlsVersion/dtlsCipher/srtpCipher (S2)
+- [2021075](https://bugzilla.mozilla.org/show_bug.cgi?id=2021075) — We should throw when RTCIceServer.credential is empty (S2)
+- [2023103](https://bugzilla.mozilla.org/show_bug.cgi?id=2023103) — Crash in [@ abort | BuildFormat] (S3, ASSIGNED: jgrulich@redhat.com)
+- [2013936](https://bugzilla.mozilla.org/show_bug.cgi?id=2013936) — SDP with h264 profile_level_id > 5 crashes tab (S3, ASSIGNED: jib@mozilla.com)
+- [1571470](https://bugzilla.mozilla.org/show_bug.cgi?id=1571470) — Support webrtc-svc (scalabilityMode) (S3, ASSIGNED: ngrunbaum@me.com) *(changed)*
+- [1617686](https://bugzilla.mozilla.org/show_bug.cgi?id=1617686) — Validate ice-ufrag and ice-pwd for invalid characters (S2, ASSIGNED: iamanshulmalik@gmail.com) *(changed)*
+- [1529398](https://bugzilla.mozilla.org/show_bug.cgi?id=1529398) — Implement RTCConfiguration.iceCandidatePoolSize (S2, ASSIGNED: mfroman@mozilla.com) *(changed)*
 
 **P3**
-- [2023893](https://bugzilla.mozilla.org/show_bug.cgi?id=2023893) — [meta] Interop 2025 Script Transform wpt.fyi timeouts (S3, NEW)
-- [2017189](https://bugzilla.mozilla.org/show_bug.cgi?id=2017189) — AV1 WebRTC decoding hangs instantly when streaming (S3, NEW)
-- [2022422](https://bugzilla.mozilla.org/show_bug.cgi?id=2022422) — Origin spoofing in unused PeerConnectionBlocker mechanism (S3, NEW)
-- [2016862](https://bugzilla.mozilla.org/show_bug.cgi?id=2016862) — WebRTC: Decoded color_space overwritten with nullopt (S3, NEW)
-- [2019255](https://bugzilla.mozilla.org/show_bug.cgi?id=2019255) — TURN with TLS doesn't work with IP + valid certificate (S3, UNCONFIRMED)
-- [2020362](https://bugzilla.mozilla.org/show_bug.cgi?id=2020362) — Mishandling of relay-based peer reflexive candidates (S3, NEW)
-- [2004466](https://bugzilla.mozilla.org/show_bug.cgi?id=2004466) — recommended_probe_size assertion in pacing_controller.cc (S3, NEW)
-- [2010661](https://bugzilla.mozilla.org/show_bug.cgi?id=2010661) — script-change-transform.https.html times out (S3, NEW)
-- [2010663](https://bugzilla.mozilla.org/show_bug.cgi?id=2010663) — script-write-twice-transform.https.html times out (S3, NEW)
-- [2010667](https://bugzilla.mozilla.org/show_bug.cgi?id=2010667) — RTCRtpScriptTransform-encoded-transform.https.html times out (S3, NEW)
-- [2005780](https://bugzilla.mozilla.org/show_bug.cgi?id=2005780) — script-transform-generateKeyFrame-simulcast.https.html unreliable on Windows (S3, NEW)
-- [1667635](https://bugzilla.mozilla.org/show_bug.cgi?id=1667635) — AbortError from getUserMedia until Firefox restarted (S3, UNCONFIRMED, old)
+- [2023893](https://bugzilla.mozilla.org/show_bug.cgi?id=2023893) — [meta] Interop 2025 Script Transform wpt.fyi timeout issues
+- [2005780](https://bugzilla.mozilla.org/show_bug.cgi?id=2005780) — script-transform-generateKeyFrame-simulcast.https.html unreliable on Windows
+- [2017189](https://bugzilla.mozilla.org/show_bug.cgi?id=2017189) — AV1 webrtc decoding hangs almost instantly when streaming
+- [2022422](https://bugzilla.mozilla.org/show_bug.cgi?id=2022422) — Origin Spoofing in WebRTCParent/Child's unused PeerConnectionBlocker mechanism
+- [2016862](https://bugzilla.mozilla.org/show_bug.cgi?id=2016862) — WebRTC: Decoded color_space overwritten with nullopt when RTP metadata absent
+- [2004466](https://bugzilla.mozilla.org/show_bug.cgi?id=2004466) — recommended_probe_size > DataSize::Zero() (0 bytes vs. 0 bytes)
+- [2020362](https://bugzilla.mozilla.org/show_bug.cgi?id=2020362) — Apparent mishandling of relay-based peer reflexive candidates
+- [1994808](https://bugzilla.mozilla.org/show_bug.cgi?id=1994808) — Implement MediaStreamTrack stats
+- [1667635](https://bugzilla.mozilla.org/show_bug.cgi?id=1667635) — AbortError Starting video failed returned from getUserMedia until Firefox restarted *(changed)*
+- [1776143](https://bugzilla.mozilla.org/show_bug.cgi?id=1776143) — Crash in [@ RtlpWaitOnCriticalSection | ... | sctp_close] *(changed)*
+- [2001005](https://bugzilla.mozilla.org/show_bug.cgi?id=2001005) — assertion "auth->password.len" failed
 
-**Other (P--, recently changed)**
-- [2021448](https://bugzilla.mozilla.org/show_bug.cgi?id=2021448) — Assertion: mDtmfEnabled at AudioConduit.cpp:265 (S3, NEW)
-- [2021480](https://bugzilla.mozilla.org/show_bug.cgi?id=2021480) — Check failed: streams[i].width > 0 (S3, NEW)
-- [2021446](https://bugzilla.mozilla.org/show_bug.cgi?id=2021446) — Assertion failure at PeerConnectionImpl.cpp:1400 (S3, NEW)
-- [910249](https://bugzilla.mozilla.org/show_bug.cgi?id=910249) — [meta] Finish implementation of MediaStream.webidl (S3, NEW, old)
-- [1776143](https://bugzilla.mozilla.org/show_bug.cgi?id=1776143) — Crash in SCTP sctp_inpcb_free | sctp_close (S3, NEW)
+**No Priority (--)**
+- [2015946](https://bugzilla.mozilla.org/show_bug.cgi?id=2015946) — Google Meet meetings crash because WebRTC tries to destroy a connected PipeWire stream (S2, ASSIGNED: jgrulich@redhat.com)
+- [2021448](https://bugzilla.mozilla.org/show_bug.cgi?id=2021448) — Assertion failure: mDtmfEnabled at AudioConduit.cpp:265 (S3)
+- [2021480](https://bugzilla.mozilla.org/show_bug.cgi?id=2021480) — Check failed: streams[i].width > 0 (0 vs. 0) (S3)
+- [2021446](https://bugzilla.mozilla.org/show_bug.cgi?id=2021446) — Assertion failure: false at PeerConnectionImpl.cpp:1400 (S3)
+- [2000194](https://bugzilla.mozilla.org/show_bug.cgi?id=2000194) — navigator.mediaDevices.enumerateDevices() incorrectly showing macOS Multi-Output Playback Device in list of audio inputs (S4)
+- [910249](https://bugzilla.mozilla.org/show_bug.cgi?id=910249) — [meta] Finish implementation of MediaStream.webidl and MediaStreamTrack.webidl *(changed)*
 
-### Seed Timeline
+### Seed Creation Timeline
 
-Seed date window: Dec 18, 2025 – Mar 18, 2026
+Creation dates of the 37 bugs created within the seed window, by month:
 
 ```
-Dec 2025  |  Jan 2026  |     Feb 2026     |     Mar 2026
-----------+------------+------------------+------------------
- **         ****        *************************   *********
-  2          4                25                      9+5(old)
+Oct 2025  [#                    ]  1 bug
+Nov 2025  [###                  ]  3 bugs
+Dec 2025  [##                   ]  2 bugs
+Jan 2026  [####                 ]  4 bugs
+Feb 2026  [##################   ] 18 bugs
+Mar 2026  [#########            ]  9 bugs (through Mar 18)
 ```
 
-> Note: The Feb 2026 spike (25 of 38 created bugs) reflects a coordinated burst of
-> Interop 2026 WebRTC wpt.fyi filing activity around Feb 25. This is an artifact
-> of planned triage, not a real crisis spike. The 5 "old" bugs in the seed came from
-> the recently-changed query (1667635, 910249, 1571470, 1776143, 1617686).
+**Note:** February's spike is explained by a coordinated wave of Interop 2026 WebRTC sub-bugs filed on Feb 25 (RTCTransportStats series + SctpTransport, RTCIceTransport, etc.). The distribution is otherwise sparse but increasing, suggesting WebRTC attention is growing heading into 2026.
 
 ---
 
-## Theme 1: RTCDataChannel Lifecycle Crash — Use-After-Free (S2, >1000 crashes/30d)
-
-**User-facing impact:** Firefox tab crashes silently during or after video/audio calls that use WebRTC data channels. The crash occurs in the content process when `RTCDataChannel::AnnounceClosed` is called during cycle collection of a reference-counted object, indicating a use-after-free or teardown ordering bug. With 1,296 reports in the past 30 days — and rising — this is the highest-volume crash in the WebRTC components.
-
-### Breadcrumbs
-
-| Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
-| [2016455](https://bugzilla.mozilla.org/show_bug.cgi?id=2016455) | Crash in NS_CycleCollectorSuspect3 / nsCycleCollectingAutoRefCnt::decr (RTCDataChannel::AnnounceClosed) | S2 | NEW | 2026-03-17 |
-
-**Crash Volume (30d):** [1,296 reports](https://crashes.mozilla.org/signatures?q=signature%3A%22NS_CycleCollectorSuspect3%20%7C%20nsCycleCollectingAutoRefCnt%3A%3Adecr%22)
-- Prior 30d: 1,001 — **Trend: rising (+29%)**
-- Top platform: Windows NT (74%), Mac OS X (16%), Linux (10%)
-- Process type: content (99%), parent (1%)
-
-### Timeline
-
-Filed 2026-02-12. Only one comment. No assignee. The crash predates the Interop 2026 work burst — it wasn't triaged as part of any meta effort. The signature `NS_CycleCollectorSuspect3` is broad (a cycle collector instrumentation hook) but the notes in the bug specifically identify `RTCDataChannel::AnnounceClosed` as the call site, narrowing the likely cause to an RTCDataChannel object being suspect-scanned after it has already been partially torn down.
-
-### Stagnation
-
-> **Stagnation Alert:** This S2 crash has **no assignee and minimal triage activity** since filing, despite exceeding the 1,000-crash/30d threshold. The rising trend adds urgency. This should be escalated.
+## Themes
 
 ---
 
-## Theme 2: CamerasParent Async Shutdown Hang Crash (S2, 663 crashes/30d, Rising)
+### Theme 1: Interop 2026 WebRTC — API Compliance Gaps
 
-**User-facing impact:** Firefox crashes during shutdown (when a tab using the camera or a WebRTC call is closed) because the CamerasParent component does not shut down within the async shutdown timeout. Affects users who use getUserMedia for camera access — video calls, virtual backgrounds, browser-based camera tools. The crash is widespread across Windows and Linux.
+**User-facing impact:** Firefox is missing or incorrectly implementing a significant number of WebRTC standard APIs, causing web conferencing tools, WebRTC test suites, and Interop 2026 benchmarks to fail or report incorrect data. Gaps span transport statistics (RTCTransportStats), RTCP parameters, codec negotiation, ICE credential pool, SVC video, and SctpTransport events.
 
-### Breadcrumbs
-
-| Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
-| [2021379](https://bugzilla.mozilla.org/show_bug.cgi?id=2021379) | Crash in AsyncShutdownTimeout / profile-before-change / CamerasParent | S2 | NEW | 2026-03-17 |
-| [1951799](https://bugzilla.mozilla.org/show_bug.cgi?id=1951799) | Intermittent assertion failure: !singleton().mCameras at CamerasChild.h:84 | S3 | NEW | 2025-07-22 |
-
-**Crash Volume (30d):** [663 reports](https://crashes.mozilla.org/signatures?q=signature%3A%22AsyncShutdownTimeout%20%7C%20profile-before-change%20%7C%20CamerasParent%22)
-- Prior 30d: 518 — **Trend: rising (+28%)**
-- Top platform: Windows NT (86%), Linux (10%), Mac OS X (3%)
-- Process type: parent (95%), main (5%)
-
-### Timeline
-
-Bug 2021379 filed 2026-03-05, P2, no assignee. The intermittent assertion in 1951799 (filed March 2025) is likely related — both involve the `CamerasChild`/`CamerasParent` IPC pair being torn down in a race condition. The rising trend across two consecutive 30-day windows suggests this is not a one-off but a structural issue in camera IPC teardown.
-
----
-
-## Theme 3: abort|BuildFormat Linux Crash — Explosive Growth (S3, 198/30d, +421%)
-
-**User-facing impact:** Firefox crashes on Linux while negotiating media format parameters during a WebRTC session. The `abort | BuildFormat` signature indicates a hard abort inside codec format construction. All 198 crashes in the past 30 days are exclusively on **Linux**, and the trend is a dramatic 5x increase compared to the prior window (38 reports). This is a strong emerging signal.
-
-### Breadcrumbs
+**Meta bug:** [2017363](https://bugzilla.mozilla.org/show_bug.cgi?id=2017363) — [meta] Interop 2026 WebRTC (40+ open dependencies)
+**Parent meta:** [2018559](https://bugzilla.mozilla.org/show_bug.cgi?id=2018559) — [meta] Interop 2026 (cross-product)
+**Previous cycle:** [1948300](https://bugzilla.mozilla.org/show_bug.cgi?id=1948300) — [meta] Interop 2025 WebRTC (RESOLVED)
+**Supporting meta:** [1805496](https://bugzilla.mozilla.org/show_bug.cgi?id=1805496) — [Meta] WebRTC 1.0+extensions API gap (according to WPT)
 
 | Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
-| [2023103](https://bugzilla.mozilla.org/show_bug.cgi?id=2023103) | Crash in abort \| BuildFormat | S3 | ASSIGNED | 2026-03-17 |
-
-**Crash Volume (30d):** [198 reports](https://crashes.mozilla.org/signatures?q=signature%3A%22abort%20%7C%20BuildFormat%22)
-- Prior 30d: 38 — **Trend: strongly rising (+421%)**
-- Platform: **Linux only** (100%)
-- Process type: parent (100%)
-
-### Timeline
-
-Filed 2026-03-13, assigned. The Linux-only and parent-process nature points to a Linux-specific code path in WebRTC audio/video codec negotiation. The explosive trend starting in this window is notable — this may be tied to a recent libwebrtc vendored update or a Linux kernel/driver interaction. Actively assigned.
-
----
-
-## Theme 4: Google Meet / PipeWire Stream Crash (S2, Active)
-
-**User-facing impact:** Google Meet (and potentially other WebRTC video conferencing services) crashes Firefox on Linux systems using PipeWire. The WebRTC stack attempts to destroy a PipeWire stream that is still connected, causing an invalid state crash. This affects the broad and growing base of Linux desktop users running modern distributions with PipeWire as the audio/video subsystem (Fedora, Ubuntu 22.04+, Arch, etc.).
-
-### Breadcrumbs
-
-| Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
-| [2015946](https://bugzilla.mozilla.org/show_bug.cgi?id=2015946) | Google Meet crashes — WebRTC tries to destroy connected PipeWire stream | S2 | ASSIGNED | 2026-03-17 |
-
-### Timeline
-
-Filed 2026-02-10. Actively assigned with 11 comments. No crash keyword, so no Socorro cross-reference is available, but the user-reported failure mode is clear: Google Meet calls crash the tab on PipeWire systems. PipeWire has been the default on major distros since 2022+. This is actively being worked.
-
----
-
-## Theme 5: Interop 2026 WebRTC — WPT Compliance Gaps (Major Theme)
-
-**User-facing impact:** Firefox's WebRTC implementation is missing or has broken implementations of key APIs required for Interop 2026: `RTCTransportStats`, `RTCIceTransport`, RTP header extensions, DTLS/RTCP parameters, H.264 codec support in CI, and various test suite failures in wpt.fyi. These gaps cause Firefox to score lower on the Interop benchmark, and some gaps (e.g., missing stats fields, broken ICE state reporting) affect real-world application compatibility.
-
-### Breadcrumbs
-
-| Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
-| [2017363](https://bugzilla.mozilla.org/show_bug.cgi?id=2017363) | [meta] Interop 2026 WebRTC (41 deps) | -- | NEW | 2026-02-26 |
-| [2014357](https://bugzilla.mozilla.org/show_bug.cgi?id=2014357) | Enable two byte RTP header extension ids | S2 | NEW | 2026-02-26 |
-| [2019375](https://bugzilla.mozilla.org/show_bug.cgi?id=2019375) | Get real h264 plugin working in wpt.fyi CI | S2 | ASSIGNED | 2026-03-10 |
+|--------|---------|----------|--------|-------------|
+| [2017363](https://bugzilla.mozilla.org/show_bug.cgi?id=2017363) | [meta] Interop 2026 WebRTC | -- | NEW | 2026-02-26 |
 | [2019330](https://bugzilla.mozilla.org/show_bug.cgi?id=2019330) | Implement RTCIceTransport.component | S2 | NEW | 2026-03-13 |
 | [2019331](https://bugzilla.mozilla.org/show_bug.cgi?id=2019331) | Implement RTCTransportStats.selectedCandidatePairId | S2 | NEW | 2026-03-13 |
 | [2019333](https://bugzilla.mozilla.org/show_bug.cgi?id=2019333) | Implement RTCTransportStats.remote/localCertificateId | S2 | NEW | 2026-03-13 |
 | [2019349](https://bugzilla.mozilla.org/show_bug.cgi?id=2019349) | Implement RTCTransportStats.bytesSent/bytesReceived | S2 | NEW | 2026-03-13 |
 | [2019355](https://bugzilla.mozilla.org/show_bug.cgi?id=2019355) | Implement RTCTransportStats.iceRole | S2 | NEW | 2026-03-13 |
 | [2019356](https://bugzilla.mozilla.org/show_bug.cgi?id=2019356) | Implement RTCTransportStats.dtlsState/dtlsRole | S2 | NEW | 2026-03-13 |
-| [2019359](https://bugzilla.mozilla.org/show_bug.cgi?id=2019359) | Implement RTCRtcpParameters.reducedSize | S2 | NEW | 2026-03-13 |
 | [2019389](https://bugzilla.mozilla.org/show_bug.cgi?id=2019389) | Implement RTCTransportStats.tlsVersion/dtlsCipher/srtpCipher | S2 | NEW | 2026-03-13 |
-| [2019332](https://bugzilla.mozilla.org/show_bug.cgi?id=2019332) | Implement RTCIceTransport.getSelectedCandidatePair() | S2 | NEW | 2026-02-26 |
-| [2019346](https://bugzilla.mozilla.org/show_bug.cgi?id=2019346) | Fix RTCPeerConnection-iceConnectionState failures | S2 | NEW | 2026-02-26 |
-| [2019361](https://bugzilla.mozilla.org/show_bug.cgi?id=2019361) | Determine correctness of RTCSctpTransport-events.html | S2 | NEW | 2026-03-03 |
+| [2019359](https://bugzilla.mozilla.org/show_bug.cgi?id=2019359) | Implement RTCRtcpParameters.reducedSize | S2 | NEW | 2026-03-13 |
+| [2019370](https://bugzilla.mozilla.org/show_bug.cgi?id=2019370) | Disable setParameters compat mode in wpt | S2 | NEW | 2026-03-07 |
+| [2016190](https://bugzilla.mozilla.org/show_bug.cgi?id=2016190) | setCodecPreferences cannot disable red/rtx | S2 | NEW | 2026-02-25 |
+| [2019346](https://bugzilla.mozilla.org/show_bug.cgi?id=2019346) | Fix failures in RTCPeerConnection-iceConnectionState.https.html | S2 | NEW | 2026-02-26 |
+| [2019353](https://bugzilla.mozilla.org/show_bug.cgi?id=2019353) | Fix bad test cases in RTCPeerConnection-setLocalDescription-answer.html | S2 | NEW | 2026-02-25 |
 | [2019365](https://bugzilla.mozilla.org/show_bug.cgi?id=2019365) | Fix failure in RTCDataChannel-GC.html | S2 | NEW | 2026-02-26 |
-| [2019370](https://bugzilla.mozilla.org/show_bug.cgi?id=2019370) | Disable setParameters compat mode in wpt | S2 | NEW | 2026-02-26 |
-| [2019378](https://bugzilla.mozilla.org/show_bug.cgi?id=2019378) | Determine correctness of RTCSctpTransport-maxChannels | S2 | NEW | 2026-03-03 |
-| [2019461](https://bugzilla.mozilla.org/show_bug.cgi?id=2019461) | Fix protocol/handover-datachannel.html | S2 | NEW | 2026-02-26 |
-| [2019469](https://bugzilla.mozilla.org/show_bug.cgi?id=2019469) | rtp-headerextensions.html recvonly extmap failure | S2 | NEW | 2026-02-26 |
-| [2021075](https://bugzilla.mozilla.org/show_bug.cgi?id=2021075) | Throw when RTCIceServer.credential is empty | S2 | NEW | 2026-03-04 |
-| [1617686](https://bugzilla.mozilla.org/show_bug.cgi?id=1617686) | Validate ice-ufrag and ice-pwd for invalid characters | S2 | ASSIGNED | 2026-03-13 |
-| [1225723](https://bugzilla.mozilla.org/show_bug.cgi?id=1225723) | [parent] Implement RTCTransportStats | S3 | NEW | 2026-02-25 |
-| [1307994](https://bugzilla.mozilla.org/show_bug.cgi?id=1307994) | [parent] Implement RTCIceTransport interface | S3 | NEW | 2026-02-25 |
+| [2019381](https://bugzilla.mozilla.org/show_bug.cgi?id=2019381) | Handle reception of early media | S2 | NEW | 2026-02-25 |
+| [2019387](https://bugzilla.mozilla.org/show_bug.cgi?id=2019387) | Fix bad setCodecPreferences call in protocol/additional-codecs.html | S2 | NEW | 2026-02-25 |
+| [2019461](https://bugzilla.mozilla.org/show_bug.cgi?id=2019461) | Fix or remove protocol/handover-datachannel.html and protocol/handover.html | S2 | NEW | 2026-02-26 |
+| [2019469](https://bugzilla.mozilla.org/show_bug.cgi?id=2019469) | protocol/rtp-headerextensions.html failure due to recvonly extmap | S2 | NEW | 2026-02-26 |
+| [1529398](https://bugzilla.mozilla.org/show_bug.cgi?id=1529398) | Implement RTCConfiguration.iceCandidatePoolSize | S2 | NEW | 2026-03-13 (ASSIGNED: mfroman@mozilla.com) |
+| [1617686](https://bugzilla.mozilla.org/show_bug.cgi?id=1617686) | Validate ice-ufrag and ice-pwd for invalid characters | S2 | ASSIGNED | 2026-03-13 (ASSIGNED: iamanshulmalik@gmail.com) |
+| [1805446](https://bugzilla.mozilla.org/show_bug.cgi?id=1805446) | Implement RTCDtlsTransport.getRemoteCertificates() | S2 | NEW | 2026-02-26 |
+| [1225723](https://bugzilla.mozilla.org/show_bug.cgi?id=1225723) | Implement RTCTransportStats | S3 | NEW | 2026-02-25 |
+| [1994808](https://bugzilla.mozilla.org/show_bug.cgi?id=1994808) | Implement MediaStreamTrack stats | S3 | NEW | 2026-03-02 |
+| [2019375](https://bugzilla.mozilla.org/show_bug.cgi?id=2019375) | Get the real h264 plugin working in wpt.fyi CI | S2 | ASSIGNED | 2026-03-10 (ASSIGNED: apehrson@mozilla.com) |
 
-### Timeline
+**Timeline:** The Interop 2025 WebRTC meta was resolved (bug 1948300). On Feb 17, 2026, the Interop 2026 meta (2017363) was filed under the cross-product Interop 2026 meta (2018559). On Feb 25 alone, 15+ sub-bugs for RTCTransportStats, RTCRtcpParameters, RTCDtlsTransport, and WPT test fixes were filed. This represents a structured, coordinated effort to close Firefox's WebRTC spec compliance gap before the 2026 Interop evaluation window. Most bugs are unassigned and waiting for engineering bandwidth.
 
-The Interop 2026 meta bug [2017363](https://bugzilla.mozilla.org/show_bug.cgi?id=2017363) was filed 2026-02-17. A large batch of ~20 sub-tasks was filed on 2026-02-25 in a single coordinated effort, covering two main areas: (1) **RTCTransportStats** — roughly 8 missing fields in the `RTCTransportStats` dictionary, parent-tracked in [1225723](https://bugzilla.mozilla.org/show_bug.cgi?id=1225723) (open since 2015); and (2) **RTCIceTransport** — 2 missing methods/events, parent-tracked in [1307994](https://bugzilla.mozilla.org/show_bug.cgi?id=1307994) (open since 2016). Most sub-tasks are P2 NEW with no assignees, suggesting they were triaged but not yet claimed.
-
-The P1 standout is [2014357](https://bugzilla.mozilla.org/show_bug.cgi?id=2014357) (two-byte RTP header extension ids), which would unblock a broad class of interoperability issues with simulcast and other advanced codec configurations.
-
-> **Note:** 39 of the 41 meta deps have `last_change_time` within the last 3 weeks, meaning this is an **active triage push**, not stagnant backlog.
+**Stagnation note:** Multiple S2 bugs (2019370, 2016190, 2019353, 2019365) last changed Feb 25–26, now ~21 days without activity. If this persists past Apr 2, these will formally hit the 30-day stagnation threshold.
 
 ---
 
-## Theme 6: RTCRtpScriptTransform / EncodedTransform WPT Timeouts (Interop 2025)
+### Theme 2: CamerasParent Shutdown Crash (Rising)
 
-**User-facing impact:** Web applications using the WebRTC Encoded Transform API (`RTCRtpScriptTransform`) may behave incorrectly or time out under load. Tests for this API consistently time out on wpt.fyi, particularly the `RTCRtpScriptTransform-encoded-transform.https.html` and `script-metadata-transform.https.html` tests. This indicates a performance or correctness issue in Firefox's implementation that may affect real-world use of the API (e.g., end-to-end encryption in video calls).
+**User-facing impact:** Firefox crashes on shutdown on Windows when a camera was active during the session. This is the highest-volume WebRTC crash in Socorro and is accelerating.
 
-### Breadcrumbs
+| Bug ID | Summary | Severity | Status | Last Changed | Crash Volume (30d) |
+|--------|---------|----------|--------|-------------|-------------------|
+| [2021379](https://bugzilla.mozilla.org/show_bug.cgi?id=2021379) | Crash in [@ AsyncShutdownTimeout \| profile-before-change \| CamerasParent] | S2 | NEW | 2026-03-17 | **1,142** (rising) |
+
+**Socorro data:**
+- **Signature:** [AsyncShutdownTimeout | profile-before-change | CamerasParent](https://crashes.mozilla.org/signatures?q=signature%3A%22AsyncShutdownTimeout+%7C+profile-before-change+%7C+CamerasParent%22)
+- **Volume (30d, since Feb 16):** 1,142 crashes
+- **Prior 30d (Jan 16 – Feb 16):** 832 crashes
+- **Trend:** RISING (+37%)
+- **Top platform:** Windows NT (993 crashes, ~87%)
+- **Top Firefox versions:** 148.0 (353), 147.0.4 (225), 148.0.2 (182)
+- **Variants:** Includes 2×, 3×, 4× CamerasParent repetitions in the same shutdown sequence
+
+**Timeline:** Bug filed Mar 5, 2026. Not yet assigned. The crash represents Firefox failing to cleanly shut down the camera parent process during profile teardown, a regression that has been steadily worsening into Firefox 148. With >1,000 reports in 30 days and a rising trend, this is the highest-urgency active bug in this scope.
+
+> **Stagnation alert:** This S2 bug has had no owner assigned since filing (Mar 5). Last activity Mar 17 — still within window, but close to crossing the 30-day threshold if unaddressed.
+
+---
+
+### Theme 3: WebRTC SVC (Scalable Video Coding) Support
+
+**User-facing impact:** Firefox does not support `scalabilityMode` in RTCRtpEncodingParameters (SVC/webrtc-svc spec), preventing high-quality adaptive bitrate video in web conferencing apps that use SVC. Competing browsers (Chrome, Safari, Edge) fully support this feature. This is a Interop 2025/2026 capability gap.
 
 | Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
+|--------|---------|----------|--------|-------------|
+| [1571470](https://bugzilla.mozilla.org/show_bug.cgi?id=1571470) | Support webrtc-svc (scalabilityMode) — *meta* | S3 | ASSIGNED | 2026-03-17 (ASSIGNED: ngrunbaum@me.com) |
+| [1991775](https://bugzilla.mozilla.org/show_bug.cgi?id=1991775) | Support VideoConfiguration scalabilityMode and spatialScalability | -- | NEW | 2025-09-30 |
+| [2000351](https://bugzilla.mozilla.org/show_bug.cgi?id=2000351) | Support SVC on Android | S3 | NEW | 2025-11-21 |
+| [2000407](https://bugzilla.mozilla.org/show_bug.cgi?id=2000407) | Add H265Enabled() to DefaultCodecPrefs | N/A | NEW | 2025-11-23 |
+| [2000693](https://bugzilla.mozilla.org/show_bug.cgi?id=2000693) | Add and upstream a constexpr array of all webrtc codecs to libwebrtc | N/A | NEW | 2025-11-18 |
+| [2001249](https://bugzilla.mozilla.org/show_bug.cgi?id=2001249) | Clean up lints in json_session_unittests.cpp | S4 | NEW | 2025-11-20 |
+| [2001872](https://bugzilla.mozilla.org/show_bug.cgi?id=2001872) | Offer dependency descriptor RTP header by default | N/A | NEW | 2025-12-01 |
+| [1947116](https://bugzilla.mozilla.org/show_bug.cgi?id=1947116) | Set all frame metadata in WebrtcMediaDataEncoder | S3 | NEW | 2025-07-10 |
+
+**Timeline:** The meta tracking bug 1571470 has been active since Aug 2019 (52 comments) and is assigned to Nico Grunbaum. Several sub-tasks were recently filed (Nov–Dec 2025) indicating renewed engineering effort. Resolved sub-bugs include RTCRtpEncodingParameters.codec (1894137) and OpenH264 temporal layers (1936052, 1947115), suggesting the work is progressing. The remaining open items cover Android SVC, codec array upstreaming, dependency descriptor headers, and frame metadata.
+
+**parity-chrome / parity-edge / parity-safari:** Many individual items have these keywords on related bugs.
+
+---
+
+### Theme 4: RTCRtpScriptTransform / Encoded Transform WPT Timeouts
+
+**User-facing impact:** Firefox's implementation of RTCRtpScriptTransform (Encoded Transform API) has sporadic timeout failures on wpt.fyi, undermining Interop 2025 scoring. These aren't crash bugs — they're reliability/flakiness issues in the implementation or test runner that cause WPT jobs to timeout.
+
+**Meta bug:** [2023893](https://bugzilla.mozilla.org/show_bug.cgi?id=2023893) — [meta] Interop 2025 Script Transform wpt.fyi timeout issues (filed Mar 17, 2026 — brand new)
+
+| Bug ID | Summary | Severity | Status | Last Changed |
+|--------|---------|----------|--------|-------------|
 | [2023893](https://bugzilla.mozilla.org/show_bug.cgi?id=2023893) | [meta] Interop 2025 Script Transform wpt.fyi timeout issues | S3 | NEW | 2026-03-17 |
 | [2010655](https://bugzilla.mozilla.org/show_bug.cgi?id=2010655) | script-metadata-transform.https.html times out (>60s) on wpt.fyi | S3 | NEW | 2026-03-17 |
-| [2010661](https://bugzilla.mozilla.org/show_bug.cgi?id=2010661) | script-change-transform.https.html times out (>10s) | S3 | NEW | 2026-03-17 |
-| [2010663](https://bugzilla.mozilla.org/show_bug.cgi?id=2010663) | script-write-twice-transform.https.html times out (>10s) | S3 | NEW | 2026-03-17 |
+| [2010657](https://bugzilla.mozilla.org/show_bug.cgi?id=2010657) | script-transform.https.html times out (>60s) on wpt.fyi | S3 | RESOLVED | 2026-03-17 |
+| [2010661](https://bugzilla.mozilla.org/show_bug.cgi?id=2010661) | script-change-transform.https.html times out (>10s) on wpt.fyi | S3 | NEW | 2026-03-17 |
+| [2010663](https://bugzilla.mozilla.org/show_bug.cgi?id=2010663) | script-write-twice-transform.https.html times out (>10s) on wpt.fyi | S3 | NEW | 2026-03-17 |
 | [2010667](https://bugzilla.mozilla.org/show_bug.cgi?id=2010667) | RTCRtpScriptTransform-encoded-transform.https.html times out (>60s) | S3 | NEW | 2026-03-17 |
 | [2005780](https://bugzilla.mozilla.org/show_bug.cgi?id=2005780) | script-transform-generateKeyFrame-simulcast.https.html unreliable on Windows | S3 | NEW | 2026-03-17 |
 
-### Timeline
-
-The individual timeout bugs were filed in January 2026 (2010655–2010667), with an additional simulcast reliability bug from December 2025 (2005780). The organizing meta bug 2023893 was created 2026-03-17 to consolidate them. All are P2 with no assignees. The meta has 6 deps (including one not yet fetched: 2010657). This is part of the broader Interop 2025 script transform work.
+**Timeline:** Individual timeout bugs started appearing in Dec 2025–Jan 2026 across these test files. The meta bug was created March 17 (yesterday), grouping them for coordinated resolution. One test (2010657) was already resolved with a fix by Byron Campen (bwc). The remaining 5 WPT files still timeout occasionally on wpt.fyi. This pattern suggests the ScriptTransform worker messaging has timing-dependent behavior that needs investigation.
 
 ---
 
-## Theme 7: WebRTC-SVC / Scalable Video Coding Implementation
+### Theme 5: WebRTC Assertion and Fuzzer Failures
 
-**User-facing impact:** Firefox does not yet fully support `RTCRtpEncodingParameters.scalabilityMode` — the standard API for scalable video coding used by Google Meet, Zoom, and other platforms for adaptive streaming quality. This means Firefox users may fall back to lower-quality video streams or fail to participate in SVC-capable sessions, causing degraded call quality compared to other browsers.
+**User-facing impact:** Multiple assertion failures in core WebRTC code paths have been discovered via fuzzing, indicating latent correctness issues in audio codec handling, video stream dimensions, and SDP parsing. Users may experience tab crashes or silent data corruption in edge-case RTC scenarios.
 
-### Breadcrumbs
+**Meta bug:** [1289609](https://bugzilla.mozilla.org/show_bug.cgi?id=1289609) — [meta] Bugs found while Fuzzing with Grizzly (hundreds of deps; all assertion bugs below are tracked here)
 
 | Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
-| [1571470](https://bugzilla.mozilla.org/show_bug.cgi?id=1571470) | Support webrtc-svc (scalabilityMode) | S3 | ASSIGNED | 2026-03-17 |
-| [1947116](https://bugzilla.mozilla.org/show_bug.cgi?id=1947116) | Set all frame metadata in WebrtcMediaDataEncoder | S3 | NEW | 2025-07-10 |
-| [1991775](https://bugzilla.mozilla.org/show_bug.cgi?id=1991775) | Support VideoConfiguration scalabilityMode and spatialScalability | -- | NEW | 2025-09-30 |
+|--------|---------|----------|--------|-------------|
+| [2021448](https://bugzilla.mozilla.org/show_bug.cgi?id=2021448) | Assertion failure: mDtmfEnabled at [AudioConduit.cpp:265](https://searchfox.org/mozilla-central/source/dom/media/webrtc/libwebrtcglue/AudioConduit.cpp) | S3 | NEW | 2026-03-14 |
+| [2021480](https://bugzilla.mozilla.org/show_bug.cgi?id=2021480) | Check failed: streams[i].width > 0 (0 vs. 0) | S3 | NEW | 2026-03-14 |
+| [2021446](https://bugzilla.mozilla.org/show_bug.cgi?id=2021446) | Assertion failure: false at [PeerConnectionImpl.cpp:1400](https://searchfox.org/mozilla-central/source/dom/media/webrtc/jsapi/PeerConnectionImpl.cpp) | S3 | NEW | 2026-03-14 |
+| [2004466](https://bugzilla.mozilla.org/show_bug.cgi?id=2004466) | recommended_probe_size > DataSize::Zero() in [pacing_controller.cc:444](https://searchfox.org/mozilla-central/source/third_party/libwebrtc/modules/pacing/pacing_controller.cc) | S3 | NEW | 2026-03-14 |
+| [2001005](https://bugzilla.mozilla.org/show_bug.cgi?id=2001005) | assertion "auth->password.len" failed | S3 | NEW | 2026-03-18 |
 
-### Timeline
-
-Bug 1571470 was opened in August 2019 and now has 52 comments — a long-running, high-engagement implementation effort. It is currently ASSIGNED. Three of its five dependencies are resolved; the two remaining are 1947116 (WebrtcMediaDataEncoder metadata) and 1991775 (VideoConfiguration API). It blocks 6 bugs (1805496, 2000351, 2000407, 2000693, 2001249, 2001872), meaning SVC completion has downstream consequences for codec simulcast work.
+**Timeline:** All five assertion bugs are tagged `ai-involved` and/or `testcase`, indicating they were discovered through automated fuzzing. Three were filed on the same day (Mar 5, 2026), suggesting a fuzzing campaign targeting WebRTC. Bug 2001005 (assertion in DTLS auth password length check, filed Nov 2025) has the `pernosco` keyword, indicating a developer reproduced it with Pernosco time-travel debugging. None have been assigned yet.
 
 ---
 
-## Theme 8: Audio Input Failures — getUserMedia, macOS Devices, Regression Cluster
+### Theme 6: Linux / PipeWire WebRTC Crashes
 
-**User-facing impact:** Firefox users on macOS and some Linux configurations encounter audio input failures in web conferencing applications. Reported patterns include: (1) camera input failing with AbortError until full browser restart; (2) silent audio playout failure when the system audio device operates at unusual sample rates (768 kHz, a value used by some macOS virtual audio devices); (3) audio channel reordering in Microsoft Teams; (4) complete audio input failure after headset interrupts on macOS 15.5 (Discord regression); (5) simultaneous getUserMedia requests hanging indefinitely. This cluster collectively represents a multi-vector reliability problem for audio I/O in web conferencing.
-
-### Breadcrumbs
+**User-facing impact:** Firefox on Linux crashes when using Google Meet (and likely other WebRTC apps using PipeWire for screen sharing or camera access). Two distinct crashes are being investigated: one when WebRTC attempts to destroy a still-connected PipeWire stream, and another during video format negotiation (`BuildFormat`).
 
 | Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
-| [2023388](https://bugzilla.mozilla.org/show_bug.cgi?id=2023388) | Cubeb Pain Points (S2 meta, tracks audio I/O issues) | S2 | NEW | 2026-03-15 |
-| [2018955](https://bugzilla.mozilla.org/show_bug.cgi?id=2018955) | WebRTC playout fails silently when default device at 768 kHz (macOS) | S3 | NEW | 2026-03-16 |
-| [1667635](https://bugzilla.mozilla.org/show_bug.cgi?id=1667635) | AbortError from getUserMedia until Firefox restarted | S3 | UNCONFIRMED | 2026-03-17 |
-| [1978259](https://bugzilla.mozilla.org/show_bug.cgi?id=1978259) | Audio channels shift in Microsoft Teams | S3 | UNCONFIRMED | 2026-01-20 |
-| [1970645](https://bugzilla.mozilla.org/show_bug.cgi?id=1970645) | [macOS 15.5] Headset interrupts on Discord causes audio input failure | S3 | NEW | 2025-08-05 |
-| [1960901](https://bugzilla.mozilla.org/show_bug.cgi?id=1960901) | Simultaneous getUserMedia requests hang infinitely | S3 | NEW | 2025-06-20 |
+|--------|---------|----------|--------|-------------|
+| [2015946](https://bugzilla.mozilla.org/show_bug.cgi?id=2015946) | Google Meet meetings crash because WebRTC tries to destroy a connected PipeWire stream | S2 | ASSIGNED | 2026-03-17 (ASSIGNED: jgrulich@redhat.com) |
+| [2023103](https://bugzilla.mozilla.org/show_bug.cgi?id=2023103) | Crash in [@ abort \| BuildFormat] | S3 | ASSIGNED | 2026-03-17 (ASSIGNED: jgrulich@redhat.com) |
 
-### Timeline
+**Timeline:** Bug 2015946 was filed Feb 10, 2026 by Jan Grulich (Red Hat), who also assigned it to himself — a strong signal of concrete investigation. Eleven comments over ~5 weeks indicate active debugging. The secondary crash (2023103, BuildFormat) appeared Mar 13 and was immediately assigned to the same engineer, suggesting a related PipeWire teardown/initialization issue. Both bugs are being handled by the same Red Hat contributor who has deep expertise in PipeWire + Firefox video stack. Progress is visible but no fix has landed yet.
 
-A new S2 meta bug [2023388](https://bugzilla.mozilla.org/show_bug.cgi?id=2023388) — "Cubeb Pain Points" — was created 2026-03-15 and already has 2018955 as a dependency. This signals intentional consolidation of audio device issues. The AbortError bug (1667635) is UNCONFIRMED and 5 years old but received activity as recently as 2026-03-17, suggesting users are still hitting it.
-
-### Stagnation
-
-> **Stagnation Alert — S3 Regressions:**
-> - [1960901](https://bugzilla.mozilla.org/show_bug.cgi?id=1960901) (simultaneous getUserMedia hang, S3, P2, regression) — last changed **2025-06-20**, over **9 months stagnant**
-> - [1970645](https://bugzilla.mozilla.org/show_bug.cgi?id=1970645) (macOS 15.5 Discord headset, S3, regression) — last changed **2025-08-05**, over **7 months stagnant**
->
-> Both are S3 regressions with no activity in 90+ days. Per scoring policy, these are flagged as stagnant.
+> **Stagnation note:** Bug 2015946 is S2 and has not received an update in the past 24 hours but is within the 30-day window. Monitor closely.
 
 ---
 
-## Theme 9: AV1 / High-Bit-Depth Video Quality in WebRTC
+### Theme 7: AV1 / H.264 Video Codec Issues
 
-**User-facing impact:** AV1-encoded WebRTC video streams hang almost immediately when decoding. Additionally, 10-bit AV1 video (I010/I410 formats) and proper color space metadata are not supported in Firefox's WebRTC receive path, causing visual quality degradation or incorrect color rendering on high-fidelity streams. As AV1 adoption grows (used in Google Meet, Teams, Discord), these issues affect a growing share of users.
-
-### Breadcrumbs
+**User-facing impact:** Users experience WebRTC video streams hanging immediately when AV1 codec is in use (e.g., on platforms like Cloudflare Calls that prefer AV1), or tab crashes when receiving H.264 streams with non-standard profile levels. Color space metadata is also dropped silently, affecting color accuracy for 10-bit video.
 
 | Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
-| [2017189](https://bugzilla.mozilla.org/show_bug.cgi?id=2017189) | AV1 WebRTC decoding hangs almost instantly when streaming | S3 | NEW | 2026-03-16 |
+|--------|---------|----------|--------|-------------|
+| [2017189](https://bugzilla.mozilla.org/show_bug.cgi?id=2017189) | AV1 webrtc decoding hangs almost instantly when streaming | S3 | NEW | 2026-03-16 |
+| [2013936](https://bugzilla.mozilla.org/show_bug.cgi?id=2013936) | SDP with h264 profile_level_id > 5 crashes tab | S3 | ASSIGNED | 2026-02-27 (ASSIGNED: jib@mozilla.com) |
+| [2014007](https://bugzilla.mozilla.org/show_bug.cgi?id=2014007) | webrtc/protocol/h264-profile-levels.https.html is timing out on Android | S3 | NEW | 2026-02-05 |
 | [2016862](https://bugzilla.mozilla.org/show_bug.cgi?id=2016862) | WebRTC: Decoded color_space overwritten with nullopt when RTP metadata absent | S3 | NEW | 2026-03-15 |
-| [2016863](https://bugzilla.mozilla.org/show_bug.cgi?id=2016863) | WebRTC: Add 10-bit AV1 decoding (I010/I410) to vendored dav1d decoder | N/A | UNCONFIRMED | 2026-03-04 |
-| [2016864](https://bugzilla.mozilla.org/show_bug.cgi?id=2016864) | WebRTC: Handle 10-bit I010 video frames in MediaPipelineReceiveVideo | N/A | UNCONFIRMED | 2026-03-04 |
+| [2016863](https://bugzilla.mozilla.org/show_bug.cgi?id=2016863) | Add 10-bit AV1 decoding (I010/I410) and color space extraction to vendored dav1d decoder | N/A | UNCONFIRMED | 2026-03-04 |
+| [2016864](https://bugzilla.mozilla.org/show_bug.cgi?id=2016864) | Handle 10-bit I010 video frames in MediaPipelineReceiveVideo with color space propagation | N/A | UNCONFIRMED | 2026-03-04 |
+| [1610199](https://bugzilla.mozilla.org/show_bug.cgi?id=1610199) | [meta][Linux/EGL] Implement ffmpeg/VAAPI video playback | S3 | NEW | 2026-02-25 (has 2017189 as dep) |
 
-### Timeline
-
-All four bugs filed in February 2026 as a coordinated cluster. Bug 2017189 (the hang) has 23 comments — highest engagement of the group — and is blocked by the VAAPI meta ([1610199](https://bugzilla.mozilla.org/show_bug.cgi?id=1610199)). Bugs 2016863 and 2016864 are UNCONFIRMED (no triage) despite being directly related to the confirmed 2016862. Bug 2016862 carries `good-first-bug` — the color space fix is likely achievable without deep WebRTC expertise.
+**Timeline:** The AV1 hang (2017189) was filed Feb 16, 2026 with 23 comments — an unusually high engagement rate for an S3 bug — suggesting active user and developer interest. It feeds into the Linux VAAPI meta (1610199) which has 200+ deps. The H264 crash (2013936, assigned to jib) relates to a missing validation on `profile_level_id` values above 5 in SDP, causing the tab to crash and a WPT test to fail on Android (2014007). The color space bugs (2016862–2016864) were filed as a coordinated set and are tagged `good-first-bug`, awaiting contributor pickup.
 
 ---
 
-## Theme 10: WebRTC Assertion / Fuzzing Failures (Fuzzer-Reported API Edge Cases)
+### Theme 8: getUserMedia / Device Enumeration Failures
 
-**User-facing impact:** Several WebRTC API edge cases trigger hard assertions or CHECK failures that abort the browser process. These were discovered via automated fuzzing (AI-assisted or Grizzly). While the reproduction cases are synthetic, the underlying state machines being violated (DTMF track not enabled, zero-width stream dimensions, invalid PeerConnectionImpl state) can theoretically be reached by adversarial or malformed web content.
-
-### Breadcrumbs
+**User-facing impact:** Camera access fails with an opaque `AbortError` and requires a browser restart to recover. On macOS, loopback/virtual audio devices appear incorrectly in the input device list. These are longstanding issues with significant user impact (1667635 has 34 comments from users across 5+ years).
 
 | Bug ID | Summary | Severity | Status | Last Changed |
-|--------|---------|----------|--------|--------------|
-| [2021448](https://bugzilla.mozilla.org/show_bug.cgi?id=2021448) | Assertion: mDtmfEnabled at AudioConduit.cpp:265 | S3 | NEW | 2026-03-14 |
-| [2021480](https://bugzilla.mozilla.org/show_bug.cgi?id=2021480) | Check failed: streams[i].width > 0 | S3 | NEW | 2026-03-14 |
-| [2021446](https://bugzilla.mozilla.org/show_bug.cgi?id=2021446) | Assertion failure at PeerConnectionImpl.cpp:1400 | S3 | NEW | 2026-03-14 |
-| [2004466](https://bugzilla.mozilla.org/show_bug.cgi?id=2004466) | recommended_probe_size assertion in pacing_controller.cc:444 | S3 | NEW | 2026-03-14 |
+|--------|---------|----------|--------|-------------|
+| [1667635](https://bugzilla.mozilla.org/show_bug.cgi?id=1667635) | AbortError Starting video failed returned from getUserMedia until Firefox restarted | S3 | UNCONFIRMED | 2026-03-17 |
+| [2000194](https://bugzilla.mozilla.org/show_bug.cgi?id=2000194) | enumerateDevices() incorrectly shows macOS Multi-Output Playback Device in audio inputs | S4 | UNCONFIRMED | 2026-03-18 |
+| [2018955](https://bugzilla.mozilla.org/show_bug.cgi?id=2018955) | WebRTC playout may fail silently when output device operates at 768 kHz on macOS | S3 | NEW | 2026-03-18 |
+| [2001200](https://bugzilla.mozilla.org/show_bug.cgi?id=2001200) | Enable connecting getUserMedia and MediaStreamTrackAudioSourceNode at different rates | S4 | NEW | 2026-03-02 (ASSIGNED: cchang@mozilla.com) |
 
-### Timeline
+**Timeline:** Bug 1667635, filed in 2020, remains UNCONFIRMED with 34 comments. It saw a new comment as recently as Mar 17, indicating ongoing user impact. Both 2000194 and 2018955 are macOS-specific edge cases discovered in late 2025 / early 2026. Bug 2001200 (P1 priority despite S4 severity) is actively assigned to C.M. Chang and addresses a WebAudio/WebRTC interaction issue with sample rate mismatches.
 
-Bugs 2021446, 2021448, and 2021480 were all filed 2026-03-05 — same day, AI-involved fuzzing. All block the Grizzly fuzzing meta ([1289609](https://bugzilla.mozilla.org/show_bug.cgi?id=1289609)). Bug 2004466 is older (Dec 2025) and is a standalone assertion. None are assigned.
-
----
-
-## Emerging Themes to Watch
-
-### E1: abort|BuildFormat Linux Crash — Already at Theme 3
-The +421% crash trend in a single month on Linux is the strongest emerging signal in this report. Actively assigned but the root cause is unknown. Watch for further escalation.
-
-### E2: Cubeb Pain Points Meta (S2, Just Created)
-[2023388](https://bugzilla.mozilla.org/show_bug.cgi?id=2023388) was created 2026-03-15 as a deliberate aggregation point for audio device issues. With S2 severity and a fresh creation, this signals intent to prioritize audio I/O reliability. More bugs will likely be added as dependents.
-
-### E3: FaceTime Web Compatibility
-[1716090](https://bugzilla.mozilla.org/show_bug.cgi?id=1716090) — [meta] Get FaceTime web working in Firefox — is a `webcompat:site-report` + `webcompat:needs-diagnosis` meta with 5 open deps and a last-changed of 2026-03-02. FaceTime Web is a high-profile site; this meta has never received enough triage attention to acquire severity or priority.
+> **Stagnation alert:** Bug 1667635 is S3, UNCONFIRMED, and has been open since 2020 with no assignment. While it receives periodic user comments, the engineering status is effectively stalled.
 
 ---
 
-## Closing: Ranked Signal Summary
+### Theme 9: SCTP Crash on Connection Close (Windows)
+
+**User-facing impact:** Firefox crashes on Windows when closing a DataChannel-enabled WebRTC connection, due to a thread-safety issue in the SCTP stack (`sctp_inpcb_free`). This affects real-time data channel applications.
+
+| Bug ID | Summary | Severity | Status | Last Changed | Crash Volume (30d) |
+|--------|---------|----------|--------|-------------|-------------------|
+| [1776143](https://bugzilla.mozilla.org/show_bug.cgi?id=1776143) | Crash in [@ RtlpWaitOnCriticalSection \| ... \| sctp_inpcb_free \| sctp_close] | S3 | NEW | 2026-03-16 | 365 (falling) |
+
+**Socorro data:**
+- **Signature:** [Crash in sctp_inpcb_free / sctp_close](https://crashes.mozilla.org/signatures?q=signature%3A%22sctp_inpcb_free%22)
+- **Volume (30d, since Feb 16):** 365 crashes
+- **Prior 30d (Jan 16 – Feb 16):** 416 crashes
+- **Trend:** FALLING (-12%)
+
+**Timeline:** Bug filed Jun 2022 (44 comments). Originally related to an outdated libusrsctp (its dep 1795697 — a sec-high update — was resolved in Jan 2023). Despite the library update, the crash persists, suggesting the underlying thread-safety issue was not fully resolved. The falling crash trend is encouraging, but 365 monthly crashes still represents meaningful user impact. Byron Campen (bwc) is tracking it.
+
+---
+
+## Emerging Themes
+
+### Emerging: WebRTC Site Compatibility (FaceTime, riverside.fm)
+
+Insufficient breadcrumbs for a full theme, but worth monitoring:
+
+- [1902507](https://bugzilla.mozilla.org/show_bug.cgi?id=1902507) — riverside.fm recommends only Chrome (S2, ASSIGNED: jib@mozilla.com, 28 comments). The site gating is caused by Firefox missing specific WebRTC/stats features tracked in 1994808 (MediaStreamTrack stats).
+- [1716090](https://bugzilla.mozilla.org/show_bug.cgi?id=1716090) — [meta] Get FaceTime web working in Firefox (5 open deps, recently changed Mar 2). FaceTime web requires specific ICE/DTLS capabilities still in progress.
+
+These are likely to grow into a full theme once the Interop 2026 API gaps begin closing, as the same missing features drive both issues.
+
+### Emerging: TURN/TLS with IP Address Certificates
+
+- [2019255](https://bugzilla.mozilla.org/show_bug.cgi?id=2019255) — TURN with TLS (turns:) does not work with an IP address + valid certificate (S3, P3, 8 comments, UNCONFIRMED). Enterprise deployments commonly use TURN servers with IP-based TLS certificates. Only 1 breadcrumb in scope, but notable for enterprise web conferencing impact.
+
+---
+
+## Closing
+
+### Ranked Signal Summary
 
 | Rank | Theme | Breadcrumbs | Meta Bug | Top Severity | Notes |
-|------|-------|-------------|----------|--------------|-------|
-| 1 | RTCDataChannel Lifecycle Crash | 1+ (crash vol >1000/30d) | — | S2 | 1,296 crashes/30d rising; no assignee; urgent |
-| 2 | Interop 2026 WPT Compliance | 23 | [2017363](https://bugzilla.mozilla.org/show_bug.cgi?id=2017363) (41 deps) | S2 | Active triage push; many P2 unassigned items |
-| 3 | CamerasParent Shutdown Crash | 2 | — | S2 | 663/30d rising; P2 with no assignee |
-| 4 | abort\|BuildFormat Linux Crash | 1 | — | S3 | +421% trend; Linux only; ASSIGNED |
-| 5 | Google Meet PipeWire Crash | 1 | — | S2 | ASSIGNED; Linux PipeWire; 11 comments |
-| 6 | Audio Input Failures Cluster | 6 | [2023388](https://bugzilla.mozilla.org/show_bug.cgi?id=2023388) (S2) | S2 | macOS + getUserMedia + Teams/Discord regressions; 2 stagnant bugs |
-| 7 | RTCRtpScriptTransform WPT Timeouts | 6 | [2023893](https://bugzilla.mozilla.org/show_bug.cgi?id=2023893) | S3 | Interop 2025 work; P2; no assignees |
-| 8 | WebRTC-SVC (scalabilityMode) | 3 | — | S3 | ASSIGNED P2; 52 comments; major feature gap |
-| 9 | AV1/10-bit Video Quality | 4 | — | S3 | Decoding hang + color space issues; good-first-bug available |
-| 10 | WebRTC Assertion/Fuzzing | 4 | [1289609](https://bugzilla.mozilla.org/show_bug.cgi?id=1289609) | S3 | Fuzzer-found edge cases; no assignees |
+|------|-------|-------------|----------|-------------|-------|
+| 1 | Interop 2026 WebRTC API Gaps | 24+ | [2017363](https://bugzilla.mozilla.org/show_bug.cgi?id=2017363) (40+ deps) | S2 | Structured campaign; most bugs unassigned; stagnation risk if Feb 25 bugs stay idle |
+| 2 | CamerasParent Shutdown Crash | 1 (crash vol 1,142) | — | S2 | Highest Socorro volume in scope; rising +37%; Windows dominant; unassigned |
+| 3 | WebRTC SVC Support | 8+ | [1571470](https://bugzilla.mozilla.org/show_bug.cgi?id=1571470) (assigned) | S3 | Active since 2019; recently reinvigorated; parity gap vs Chrome/Safari/Edge |
+| 4 | RTCRtpScriptTransform WPT Timeouts | 6 | [2023893](https://bugzilla.mozilla.org/show_bug.cgi?id=2023893) (new) | S3 | Interop 2025 scoring at risk; meta filed yesterday; 1 of 6 already RESOLVED |
+| 5 | WebRTC Assertion / Fuzzer Failures | 5 | [1289609](https://bugzilla.mozilla.org/show_bug.cgi?id=1289609) | S3 | All unassigned; 3 filed same day suggesting fuzzing campaign; `pernosco` tag on one |
+| 6 | Linux / PipeWire Crashes | 2 | — | S2 | Both ASSIGNED jgrulich; active investigation; impacts Google Meet on Linux |
+| 7 | AV1 / H.264 Codec Issues | 7 | [1610199](https://bugzilla.mozilla.org/show_bug.cgi?id=1610199) | S3 | AV1 hang has 23 comments; H264 assigned to jib; 2 good-first-bugs available |
+| 8 | getUserMedia / Device Enumeration | 4 | — | S3 | 1667635 is 5-year-old stalled issue; macOS edge cases newly filed |
+| 9 | SCTP Crash on Close (Windows) | 1 (crash vol 365) | — | S3 | Falling trend; 44-comment history; 3-year-old issue; lower urgency |
+
+### Resources Used
+
+| Resource | Details |
+|----------|---------|
+| Bugzilla REST API | 8 queries (seed A + seed B + 4 dep batches + 2 keyword expansions) |
+| Socorro REST API | 6 queries (CamerasParent volume/trend, SCTP volume/trend, RTCDataChannel, platform facets) |
+| socorro-cli | 4 attempts — failed with `ParseError(Invalid)` on pipe-delimited signatures; fell back to direct REST API |
+| Bug count analyzed | ~75 unique bugs across seed + dep crawl |
+
+### Suggestions for Improving This Skill
+
+1. **socorro-cli pipe-signature fix:** The tool panics on signatures containing `|` characters (e.g., `"A | B | C"`). The skill should document quoting/escaping requirements or fall back to the REST API automatically. Alternatively, a `--signature-contains` mode (substring search) would sidestep the issue entirely.
+2. **Duplicate detection across sessions:** A mechanism to compare this run's findings against a prior report (e.g., `wrangler-web-conferencing-*.md`) would allow the skill to flag "new since last run" and "resolved since last run" themes, dramatically increasing its utility for recurring use.
+3. **Interop context injection:** When a meta bug for Interop N is detected, automatically surface the wpt.fyi score and trend for the relevant category (e.g., fetch from `wpt.fyi/api/runs?product=firefox`). This would quantify the gap in a way that's immediately actionable.
+4. **cc_count retrieval:** The API didn't return `cc_count` in the standard batch response for several bugs. The skill correctly handles this case, but automating a fallback batch fetch for it would ensure signal scoring is more accurate.
 
 ---
 
-## Resources Used
+> *"The art of detection lies not in seeing what is there, but in noticing what has been overlooked — and following the trail before it goes cold."*
 
-| Resource | Detail |
-|----------|--------|
-| Bugzilla REST API | 8 batch fetches; ~120 bugs retrieved |
-| Socorro | 4 signatures searched; 30d + trend windows |
-| Dep crawl depth | 2 levels (meta deps + selected sub-deps) |
-| Keyword expansion | `keywords=regression`, `keywords=webcompat:site-report` in scope |
-| Cache | Written fresh to `reports/wrangler_cache_web-conferencing.json` |
-
----
-
-## Suggestions for Improving This Skill
-
-- **Assignee field in breadcrumb tables:** The current `include_fields` list omits `assigned_to` from Bugzilla API calls. Adding it would allow the report to directly name engineers on ASSIGNED bugs without a second fetch.
-- **Crash signature linking from bug text:** For bugs tagged `crash` without a Socorro signature in the summary, the skill currently can't auto-link. A heuristic to extract the signature from the first comment would improve crash enrichment coverage (e.g., bug 2015946 has no crash tag but is clearly a crash).
-- **Stagnation threshold tuning:** The current 30-day S1/S2 threshold and 90-day S3 regression threshold are useful but could be supplemented with a "filed >60d, never assigned" rule for S2 bugs (bug 2016455 would have caught this).
-
----
-
-*"The game is afoot — not to solve every mystery at once, but to know which door to knock on first."*
-
----
-
-*Save this report? Suggested filename: `wrangler-web-conferencing-2026-03-18.md` — already saved.*
