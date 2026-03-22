@@ -258,4 +258,4 @@ Present a short summary of the themes you've found. Save the full research repor
 - Use 'linkable' format for all bug IDs, for example - [1234567](https://bugzilla.mozilla.org/show_bug.cgi?id=1234567)
 - Use searchfox links for code references, for example - [MediaDecoderStateMachine.cpp](https://searchfox.org/mozilla-central/source/dom/media/MediaDecoderStateMachine.cpp)
 - When referencing crash signatures, link to Socorro search results for that signature, for example - [Crash Signature](https://crashes.mozilla.org/signatures?q=signature%3A%22%3Csignature%3E%22)
-- In tables that itemize bugs, if the bug is ASSIGNED include the assignee information. 
+- References to ASSIGNED bug statuses should include the owner - 'ASSIGNED (jimm)'

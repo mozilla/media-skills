@@ -76,6 +76,13 @@ highlight -
 - Simple, non-security-related test cases may form the basis for developing a web platform test.
 - Note if there is an existing web platform test that currently fails related to this issue.
 
+Check for:
+- Attached HTML/JS/CSS test files
+- Reproduction code in comments
+- References to test cases
+- Files named: `testcase*`, `repro*`, `poc*`, `reduced*`, `min*`, `minimized*`
+- Keywords: `testcase`
+- Flags: `in-testsuite+`, `in-qa-testsuite+`
 
 ### about:support Information
 
@@ -83,8 +90,9 @@ about:support data may be posted in a comment or as an attachment. When detected
 
 #### Detection
 
-A comment contains about:support data if it includes any of these markers:
-- The heading "Application Basics" or "Troubleshooting Information"
+A comment, text based attachement, or json based attachement that,
+
+- The heading "Application Basics" or "Troubleshooting Information" (may be in a  non-english language)
 - A structured key-value block with fields like "Firefox", "User Agent", "Crash Reports for the Last 3 Days"
 - A large block of technical fields typical of the Firefox troubleshooting page
 
@@ -99,18 +107,22 @@ Extract the following fields exactly as they appear, quoting values verbatim:
 - GPU/graphics adapter name and **driver version**
 - All crash report IDs (format: bp-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) — list every one
 - All installed extensions (name and version)
-- Any preferences listed as **non-default** or user-modified
+- Any preference listed in Important Modified Preferences that seems unique or unexpected.
 - Any features listed as blocked or disabled (e.g. blocked GPU features)
 - In the Graphics section, note the Graphics Failure Log
+- In the Media section, Codec Support Information
 
 ### Using Extracted Data
 
 - **Crash IDs** — Can be fed into Socorro lookup to assess crash volume, signatures, and recurrence. This is high-priority data.
-- **Extensions** — Note any extensions that could plausibly interfere with the browser. Investigate whether they are known to cause issues.
-- **Non-default prefs** — Flag any media, graphics, or performance prefs set to non-default values; these are common sources of issues.
+- **Extensions** — Note any extensions that could plausibly interfere with the browser. For example, 
+  - user is experiencing YouTube playback issues and has an obscure YouTube related extension that's active.
+  - Odd ball, unpopular extensions should be investigated.
+  - Note common content and ad blocking type extensions, like uBlock Origin, which can greatly impact user experience.
 - **Blocked features** — Hardware acceleration or GPU features listed as blocked indicate a software fallback path that may affect playback or rendering.
 - **GPU/driver info** — Cross-reference against known problematic driver versions if the issue appears hardware-related.
 - **Anti-virus software** - Note any 3rd party, non-operating system provided anti-virus or spyware. These products can cause browser stability issues.
+- **Non-default prefs** — Flag any media, graphics, or performance prefs set to non-default values; these are common sources of issues.
 
 ### Language Handling
 

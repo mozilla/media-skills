@@ -226,10 +226,11 @@ If the bug is associated with crash signature(s), check Socorro for crash volume
 As you triage, assess bugs for "good first bug" qualities and note this in your summaries. You may come across existing good first bugs tagged with the `good-first-bug` keyword.
 
 Good First Bug qualities:
-- A specific, well-understood, well-defined, and easily reproducible issue
-- A simple bug where you have already generated proposed source changes to fix it
-- Does not represent a major flaw users would commonly experience (P3/S3 or lower)
-- An AI agent could confidently fix it with a simple patch unlikely to cause regressions
+- A specific, well-understood, well-defined, and easily reproducible issue.
+- A specific, well-understood, well-defined, minor feature.
+- A simple bug where you have already generated proposed source changes to fix it.
+- Does not represent a major flaw users would commonly experience (P3/S3 or lower).
+- An AI agent could confidently fix the issue with a short patch that is unlikely to cause regressions.
 
 ### Step 5: Quick Determination
 
@@ -364,11 +365,13 @@ Draft an appropriate response using either:
 2. A custom response for unique situations
 
 Response guidelines:
-- Be professional, helpful, and welcoming.
-- Thank reporters (especially new contributors).
+- Be professional and helpful.
+- Find something to thanks reporters for (especially new contributors).
 - Be specific about what information is needed.
 - Provide clear next steps.
 - Keep responses concise and actionable.
+
+Prior to generating a response, check over each question your will propose and ask yourself if the information is already available in the bug report. If so, remove that question and note the answer.
 
 ### Step 9: Generate Analysis Report
 
