@@ -2,6 +2,8 @@
 
 A single-bug triage assistant that researches an open Bugzilla report in depth, finds related bugs and duplicates, cross-references crash data, and produces a structured triage report with a suggested severity/priority assessment and a draft response to the reporter.
 
+Typically executed in a Firefox source directory with various support tools installed (socorro, searchfox).
+
 ### What it does
 
 1. **Fetches and parses the bug** — retrieves the full bug report including description, comments, attachments, crash signatures, change history, and dependency fields. Flags security group changes, component reclassifications, and severity/priority assignments from history.

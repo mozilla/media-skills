@@ -2,6 +2,8 @@
 
 A research skill that surfaces recurring themes and emerging issues buried in Mozilla's Bugzilla database. Given a product/component scope and a date window, it fetches seed bugs, crawls dependency graphs, cross-references crash data from Socorro, and produces a ranked signal report — all saved to `./reports/`.
 
+Typically executed in a Firefox source directory with various support tools installed (socorro, searchfox).
+
 ### What it does
 
 1. **Seeds from Bugzilla** — fetches up to 50 open bugs (unconfirmed, new, assigned, or reopened) from the specified scope and date window, using a hybrid strategy that mixes recently-created and recently-changed bugs for better coverage.

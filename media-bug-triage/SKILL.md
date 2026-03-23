@@ -58,7 +58,8 @@ Example input: `1234567 scope:graphics`
 
 Use Mozilla's Bugzilla REST API directly through WebFetch. Do not use the moz MCP server for Bugzilla access.
 
-Parse ../shared/Bugzilla.md for details on how to access and use Bugzilla data effectively during this triage process.
+Parse ../shared/Bugzilla.md for details on how to access and use Bugzilla data effectively during this triage process. Check for updates, this skill
+is a critical part of our workflow.
 
 #### Bugzilla Access Rules
 
@@ -436,21 +437,12 @@ or possible duplicates. Note that codebase inspection results, if completed, are
 If applicable, summarize any information about when this issue was first observed and what may have
 caused the regression. This information is often found in the initial bug report or in follow-up comments.
 
-## Classification
-
-| Signal | Detected | Evidence |
-|--------|----------|----------|
-| Clear STR | Yes/No | [brief evidence] |
-| Test Case | Yes/No | [brief evidence] |
-| Crash Stack | Yes/No | [brief evidence] |
-| Fuzzing | Yes/No | [brief evidence] |
-
 ## Assessment
 
 - **Suggested Severity:** S1/S2/S3/S4/N/A/--
 - **Suggested Priority:** P1/P2/P3/P5/--
 
-### Assessment Reasoning
+## Assessment Reasoning
 
 [2-3 paragraphs maximum.]
 

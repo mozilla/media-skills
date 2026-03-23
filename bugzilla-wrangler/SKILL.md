@@ -82,7 +82,8 @@ The resolved product/component set is used identically to a named scope profile 
 
 Use Mozilla's Bugzilla REST API directly through WebFetch. Do not use the moz MCP server for Bugzilla access.
 
-Parse ../shared/Bugzilla.md for details on how to access and use Bugzilla data effectively during this triage process.
+Parse ../shared/Bugzilla.md for details on how to access and use Bugzilla data effectively during this triage process. Check for updates, this skill
+is a critical part of our workflow.
 
 ## Bugzilla Access Rules
 
