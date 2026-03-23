@@ -5,13 +5,12 @@
     the crawl. Let's make sure that's happening.
 - Themes - from here, how do we dive deeper?
     Facilitating the development of a software project around a theme.
-- Neither tool likely understands the differences between processes and metrixc like crash rate.
+- Neither tool likely understands the differences between processes and metrics like crash rate.
 - Github activity is a pretty big blind spot currently.
 
 **both skills**
 - Status table columns need standardization - | ASSIGNED S2 (padenot) | ? something like this.
 - scope profiles and bugzilla - why can't we tie to scope to a bugzilla reference?
-
 
 **Good Suggestions from Claude**
 
@@ -23,4 +22,3 @@
 - The cc_count field is systematically absent from Bugzilla REST API responses without authentication. The skill should document this more explicitly and suggest that comment_count is an acceptable substitute, or note that cc_count requires a logged-in API token to appear.
 - The --date window filter for socorro-cli did not return count-only output in the AGGREGATIONS block; the trend comparison relied on the FOUND count from the first lines. A dedicated count mode or structured JSON output from socorro-cli would make 30d/60d trend comparison more reliable.
 - The Bugzilla REST API does not return cc_count when include_fields is specified alongside it. Augmenting seed enrichment with a secondary per-bug fetch for cc_count would allow more accurate signal scoring for the community-interest dimension.
-- Adding a assignee field to the include_fields list would avoid the need to infer stagnation purely from last_change_time; it would allow direct detection of unassigned S1/S2 bugs.

@@ -131,6 +131,20 @@ Extract the following fields exactly as they appear, quoting values verbatim:
 - Report translations of key fields (summary, initial description, title) if in a different language.
 - Translate filenames of attachments if needed and report them.
 
+### Keywords
+
+Bugzilla keywords provide useful information on bug status and properites. See the [bugzilla keyword reference](https://bugzilla.mozilla.org/describekeywords.cgi) for details on any specific keyword.
+
+Below are a few important keywords you should always note as they may be useful in your analysis.
+
+#### Webcompat Keywords
+
+Format: 'webcompat:(info)', examples - webcompat:needs-diagnosis, webcompat:site-report, webcompat:sitepatch-applied
+
+- sitepatch-applied: The web compatibility bug may have an open status but this keyword implies a 'site patch' as been applied and the issue may be fixed. Site patches are small, temporary functionality changes Mozilla makes in the browser to help address web site compatibility issues. These changes will typically be attached as patches to the bug, which can provide context as to what type of temporary change was needed. Site patches are controlled by a system level extension Mozilla distributes to all users. Applying a 'site patch' to a web site is typically referred to as an 'intervention'. 
+- needs-sitepatch: Web compat team feels the site could benefit from the development of a 'site patch'.
+- needs-diagnosis: Web Compat Team is asking for help in diagnosing the issue from a specific Mozilla team.
+
 ### Misc
 
 - When suggesting a bug duplication change, the older bug is typically kept open and the younger bug is duplicated.
