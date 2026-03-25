@@ -244,15 +244,39 @@ Do not paraphrase. If a field is absent, say "not present".
 
 ## Workflow
 
-### Step 1: Resolve Run Configuration
+### Step 1: Severity Orientation
+
+An S2 rating should be a high bar, reserved for issues that are clearly severe and impactful based on the information provided. An S1 rating should be an even higher bar, reserved for issues that are catastrophic in nature and have a very high impact on users.  Be very critical of the information provided, and do not hesitate to conclude that the issue does not meet the criteria for S1 or S2 severity if the information is unclear, incomplete, inconsistent, or does not indicate a severe impact on users.
+
+The following are a list of S2-rated reports found across the graphics components that have been accepted as that severity, corrected and marked as RESOLVED.  These may be useful for comparison during this confidence check:
+
+- https://bugzilla.mozilla.org/show_bug.cgi?id=2022381
+- https://bugzilla.mozilla.org/show_bug.cgi?id=2013682
+- https://bugzilla.mozilla.org/show_bug.cgi?id=2018451
+- https://bugzilla.mozilla.org/show_bug.cgi?id=2022243
+- https://bugzilla.mozilla.org/show_bug.cgi?id=1905611
+
+Note that some of these may be security-sensitive and may not be accessible without appropriate permissions. If you fail to access them due to permissions, prompt the user to provide an API key with the necessary permissions to access security-sensitive bugs. If the user provides an API key, use it for all subsequent Bugzilla API requests in the current session. If the user chooses not to provide an API key, note that security-sensitive information will be inaccessible for this analysis.
+
+In order to see the difference between a properly categorized S2 and a properly categorized S3, you may also want to review some S3-rated bugs in the same components:
+
+- https://bugzilla.mozilla.org/show_bug.cgi?id=2025060
+- https://bugzilla.mozilla.org/show_bug.cgi?id=1977746
+- https://bugzilla.mozilla.org/show_bug.cgi?id=1974596
+- https://bugzilla.mozilla.org/show_bug.cgi?id=1654462
+- https://bugzilla.mozilla.org/show_bug.cgi?id=2015400
+
+After processing these examples for training purposes, you should cache the results to the project memory for quick reference during subsequent triage sessions.
+
+### Step 2: Resolve Run Configuration
 
 Apply the Run Configuration section: extract the bug ID from user input and resolve the scope profile. If no bug ID was provided, prompt the user as described in Run Configuration. State the active scope profile before proceeding.
 
-### Step 2: Check For Previous Reports
+### Step 3: Check For Previous Reports
 
 In the ./reports directory, a previous report for this bug may already exist. If you detect one, inform the user and ask if we should continue. If the user prefers not to continue, end the skill.
 
-### Step 3: Fetch Initial Bug Data
+### Step 4: Fetch Initial Bug Data
 
 Fetch the initial bug report, including:
 
@@ -272,7 +296,7 @@ Fetch the initial bug report, including:
 
 Print a brief summary of the bug including summary, reporter, reported date (bug age), severity/priority, and note if the bug is security sensitive.
 
-### Step 4: Organize and Analyze Bug Information
+### Step 5: Organize and Analyze Bug Information
 
 #### Check Bug Status
 
@@ -309,7 +333,7 @@ If there is a failure to access a security-sensitive bug due to permissions, pro
 
 If the user decides not to provide an API key, note that security-sensitive information will be inaccessible for this analysis.
 
-### Step 5: Qualitative Assessment of Information
+### Step 6: Qualitative Assessment of Information
 
 #### Confidence Check
 
