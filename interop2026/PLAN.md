@@ -29,12 +29,12 @@ The lead developer on this project, Byron Campen, has been filing bugs in Bugzil
 
 ## Engineering Team
 
-| Engineer | Bugzilla Email |
-|----------|----------------|
-| Byron Campen | docfaraday@gmail.com |
+| Engineer | Bugzilla Email | GitHub Account |
+|----------|----------------|----------------|
+| Byron Campen | docfaraday@gmail.com | https://github.com/docfaraday |
 | Michael Froman | mfroman@nostrum.com |
 | Daniel Baker | dbaker@mozilla.com |
-| Jan-Ivar Bruaroey | jib@mozilla.com |
+| Jan-Ivar Bruaroey | jib@mozilla.com | https://github.com/jan-ivar |
 | Nico Grunbam | na-g@nostrum.com |
 | Andreas Pehrson | apehrson@mozilla.com |
 
@@ -54,6 +54,7 @@ Notes on these spreadsheets:
 ## Spec Coverage
 
 Much of this work will be associated with WebRTC specification compliance. In the documentation we put together, we should track the areas of the specification that individual tests are associated with.
+* [WebRTC Specification](https://w3c.github.io/webrtc-pc/)
 
 ## Initial Research Goals
 
@@ -157,6 +158,24 @@ GET https://bugzilla.mozilla.org/rest/bug?id=X,Y,Z&include_fields=id,summary,sta
 ```
 
 The meta bug's `depends_on` field lists all child bug IDs — fetch those first, then batch-query their status.
+
+### GitHub Issues
+
+Two external issue trackers are relevant to this project. Only track issues that are explicitly referenced in our existing
+tracking material (spreadsheet, reports, Bugzilla bugs, or test-annotations.json) — do not sweep for new issues.
+
+**WPT test issues** — filed against tests that are broken or invalid:
+```
+GET https://api.github.com/repos/web-platform-tests/wpt/issues/NNNN
+```
+
+**W3C WebRTC spec issues** — spec decisions that may unblock or change Firefox work:
+```
+GET https://api.github.com/repos/w3c/webrtc-pc/issues/NNNN
+```
+
+For each tracked issue, fetch current `state` (open/closed) and note any linked PRs in the closing event.
+A newly-closed spec issue may change a test's `on-hold` status in `test-annotations.json`.
 
 ### Scripts and temporary data
 

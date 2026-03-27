@@ -1,4 +1,38 @@
 {
+  "_github_issues": {
+    "description": "GitHub issues explicitly referenced in project tracking material. Only add issues referenced in spreadsheet, reports, Bugzilla bugs, or annotations — do not sweep for new ones. Fetch state on each report run.",
+    "web-platform-tests/wpt": {
+      "37561": {
+        "state": "open",
+        "title": "webrtc/protocol/handover-datachannel.html and webrtc/protocol/handover.html attempt to perform an invalid ICE restart in an answer",
+        "url": "https://github.com/web-platform-tests/wpt/issues/37561",
+        "affects": ["webrtc/protocol/handover-datachannel.html", "webrtc/protocol/handover.html"],
+        "last_checked": "2026-03-27"
+      },
+      "37564": {
+        "state": "open",
+        "title": "webrtc/simulcast/rid-manipulation.html appears to be invalid",
+        "url": "https://github.com/web-platform-tests/wpt/issues/37564",
+        "affects": ["webrtc/simulcast/rid-manipulation.html"],
+        "last_checked": "2026-03-27"
+      }
+    },
+    "w3c/webrtc-pc": {
+      "2899": {
+        "state": "closed",
+        "title": "No way to observe DataChannel-only transport events in initial negotiation",
+        "url": "https://github.com/w3c/webrtc-pc/issues/2899",
+        "closed_by_pr": "https://github.com/w3c/webrtc-pc/pull/3094",
+        "closed_pr_title": "Expose pc.sctp transport in have-(local|remote)-offer",
+        "closed_date": "2026-03-12",
+        "closed_by": "jan-ivar",
+        "resolution": "Spec now requires pc.sctp to be accessible before negotiation completes. Unblocks RTCSctpTransport-events and RTCSctpTransport-maxChannels investigation.",
+        "affects": ["webrtc/RTCSctpTransport-events.html", "webrtc/RTCSctpTransport-maxChannels.html?interop-2026"],
+        "last_checked": "2026-03-27"
+      }
+    }
+  },
+
   "_meta": {
     "description": "Per-test annotations capturing non-obvious context not derivable from WPT scores or Bugzilla alone. Seed this at the start of each report run so findings persist across sessions.",
     "last_updated": "2026-03-27",
@@ -112,17 +146,17 @@
   },
 
   "webrtc/RTCSctpTransport-events.html": {
-    "status": "on-hold",
+    "status": "ff-bug",
     "bugs": [2019361],
-    "wpt_issue": "https://github.com/w3c/webrtc-pc/issues/2899",
-    "note": "Test is wrong per the latest editor's draft. W3C WebRTC WG discussion ongoing (w3c/webrtc-pc#2899, also discussed in 2023-09-12 minutes). Do not fix Firefox until spec settles."
+    "spec_issue": "https://github.com/w3c/webrtc-pc/issues/2899",
+    "note": "Was on-hold pending spec decision. w3c/webrtc-pc#2899 CLOSED March 12 2026 via PR #3094 (jan-ivar): 'Expose pc.sctp transport in have-(local|remote)-offer'. Spec now settled — pc.sctp should be accessible before negotiation completes. Needs investigation to determine whether the WPT test matches the new spec text, and whether Firefox needs a fix."
   },
 
   "webrtc/RTCSctpTransport-maxChannels.html?interop-2026": {
-    "status": "on-hold",
+    "status": "ff-bug",
     "bugs": [2019378],
-    "wpt_issue": "https://github.com/w3c/webrtc-pc/issues/2899",
-    "note": "Same spec-under-discussion issue as RTCSctpTransport-events. On hold."
+    "spec_issue": "https://github.com/w3c/webrtc-pc/issues/2899",
+    "note": "Was on-hold for the same reason as RTCSctpTransport-events. w3c/webrtc-pc#2899 now CLOSED (March 12 2026). Same investigation needed."
   },
 
   "webrtc/RTCRtpSender-getStats.https.html": {
