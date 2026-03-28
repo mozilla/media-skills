@@ -35,7 +35,7 @@
 
   "_meta": {
     "description": "Per-test annotations capturing non-obvious context not derivable from WPT scores or Bugzilla alone. Seed this at the start of each report run so findings persist across sessions.",
-    "last_updated": "2026-03-27",
+    "last_updated": "2026-03-28",
     "status_values": [
       "passing       — fully passing in Firefox now",
       "ff-bug        — confirmed Firefox bug, fix path known",
@@ -160,9 +160,9 @@
   },
 
   "webrtc/RTCRtpSender-getStats.https.html": {
-    "status": "untracked",
-    "bugs": [],
-    "note": "FF-only failure: 4/5 as of March 27 2026. Not in triage spreadsheet. No bug filed. Likely a stats-related subtest. Should be added to spreadsheet and meta bug."
+    "status": "ff-bug",
+    "bugs": [2027217],
+    "note": "FF-only failure: 4/5 as of March 27 2026. Not in triage spreadsheet; tracked via annotations. The failing subtest checks that sender.getStats() returns candidate-pair, local-candidate, and remote-candidate stat entries — Firefox likely does not walk the stats graph far enough to include ICE candidate stats in the sender-scoped report. No existing bug covers RTCIceCandidatePairStats/RTCLocalIceCandidateStats/RTCRemoteIceCandidateStats directly; see also bug 2019331 (RTCTransportStats.selectedCandidatePairId) as related work."
   },
 
   "webrtc/rtp-stats-lifetime.https.html?interop-2026": {
@@ -265,9 +265,16 @@
   },
 
   "webrtc/protocol/transceiver-mline-recycling.html": {
-    "status": "untracked",
-    "bugs": [],
-    "note": "FF-only failure: 0/2 as of March 27 2026. Not in triage spreadsheet. No bug filed. Should be added to spreadsheet and meta bug."
+    "status": "ff-bug",
+    "bugs": [2027219],
+    "note": "FF-only failure: 0/2 as of March 27 2026. Not in triage spreadsheet; tracked via annotations. Both subtests fail: Firefox does not recycle rejected (port=0) m-line slots for new transceivers per JSEP §5.2.2 — it appends new m-lines instead. Covers local negotiation (audio→audio, audio→video, video→video recycling) and remote negotiation (pre-rejected remote m-line reuse). Pure JSEP/SDP compliance issue; no media flow required."
+  },
+
+  "webrtc/protocol/ice-ufragpwd.html": {
+    "status": "passing",
+    "bugs": [1617686],
+    "first_passing": "2026-03-28",
+    "note": "Bug 1617686 (Anshul Malik) RESOLVED/FIXED. Score confirmed 2/2 in WPT run 066334c420 (March 28 2026). Was 0/2 on March 27 due to run timing lag — fix landed after that run was captured."
   },
 
   "webrtc/simulcast/h264.https.html": {

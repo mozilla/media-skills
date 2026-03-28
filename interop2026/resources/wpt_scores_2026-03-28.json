@@ -1,0 +1,5514 @@
+{
+  "fetched": "2026-03-28T12:03:11.982793Z",
+  "revision": "066334c420",
+  "results": {
+    "firefox": {
+      "/webrtc/legacy/RTCPeerConnection-createOffer-offerToReceive.optional.html": {
+        "s": "O",
+        "c": [
+          18,
+          18
+        ]
+      },
+      "/webrtc/legacy/RTCRtpTransceiver-with-OfferToReceive-options.optional.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/legacy/munge-dont.html": {
+        "s": "O",
+        "c": [
+          3,
+          5
+        ]
+      },
+      "/webrtc/legacy/onaddstream.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/legacy/simplecall_callbacks.optional.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCCertificate-postMessage.html": {
+        "s": "O",
+        "c": [
+          2,
+          3
+        ]
+      },
+      "/webrtc/RTCCertificate.html": {
+        "s": "O",
+        "c": [
+          4,
+          5
+        ]
+      },
+      "/webrtc/RTCConfiguration-bundlePolicy.html": {
+        "s": "O",
+        "c": [
+          18,
+          18
+        ]
+      },
+      "/webrtc/RTCConfiguration-certificates.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceCandidatePoolSize.html": {
+        "s": "O",
+        "c": [
+          0,
+          9
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceServers.html?rest": {
+        "s": "O",
+        "c": [
+          56,
+          58
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceServers.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          4
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceTransportPolicy.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceTransportPolicy.html?rest": {
+        "s": "O",
+        "c": [
+          19,
+          19
+        ]
+      },
+      "/webrtc/RTCConfiguration-rtcpMuxPolicy.html": {
+        "s": "O",
+        "c": [
+          0,
+          14
+        ]
+      },
+      "/webrtc/RTCConfiguration-validation.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDTMFSender-insertDTMF.https.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCDTMFSender-ontonechange-long.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDTMFSender-ontonechange.https.html?rest": {
+        "s": "O",
+        "c": [
+          11,
+          11
+        ]
+      },
+      "/webrtc/RTCDTMFSender-ontonechange.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCDataChannel-GC.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-GC.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-binaryType.window.html": {
+        "s": "O",
+        "c": [
+          10,
+          10
+        ]
+      },
+      "/webrtc/RTCDataChannel-bufferedAmount.html": {
+        "s": "O",
+        "c": [
+          30,
+          30
+        ]
+      },
+      "/webrtc/RTCDataChannel-close.html": {
+        "s": "O",
+        "c": [
+          8,
+          12
+        ]
+      },
+      "/webrtc/RTCDataChannel-iceRestart.html": {
+        "s": "E",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCDataChannel-id.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-blob-order.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-array-buffer-negotiated.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-array-buffer.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-blob-negotiated.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-blob.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-string-negotiated.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-string.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send.html": {
+        "s": "O",
+        "c": [
+          25,
+          25
+        ]
+      },
+      "/webrtc/RTCDataChannel-worker-GC.html": {
+        "s": "O",
+        "c": [
+          1,
+          2
+        ]
+      },
+      "/webrtc/RTCDataChannelEvent-constructor.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCDataChannelInit-maxPacketLifeTime-enforce-range.html": {
+        "s": "O",
+        "c": [
+          17,
+          17
+        ]
+      },
+      "/webrtc/RTCDataChannelInit-maxRetransmits-enforce-range.html": {
+        "s": "O",
+        "c": [
+          17,
+          17
+        ]
+      },
+      "/webrtc/RTCDtlsTransport-getRemoteCertificates.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCDtlsTransport-state.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDtlsTransport-state.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCError.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCError.html?interop-2026": {
+        "s": "O",
+        "c": [
+          20,
+          20
+        ]
+      },
+      "/webrtc/RTCIceCandidate-constructor.html": {
+        "s": "O",
+        "c": [
+          18,
+          21
+        ]
+      },
+      "/webrtc/RTCIceConnectionState-candidate-pair.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCIceTransport.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCIceTransport.html?rest": {
+        "s": "O",
+        "c": [
+          12,
+          16
+        ]
+      },
+      "/webrtc/RTCPeerConnection-GC.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-SLD-SRD-timing.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-add-track-no-deadlock.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate-connectionSetup.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate-timing.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate.html?interop-2026": {
+        "s": "O",
+        "c": [
+          34,
+          34
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTcpIceCandidate.html": {
+        "s": "O",
+        "c": [
+          81,
+          83
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTrack.https.html": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTransceiver-renegotiation.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTransceiver.https.html?rest": {
+        "s": "O",
+        "c": [
+          16,
+          16
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTransceiver.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-canTrickleIceCandidates.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-candidate-in-sdp.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-capture-video.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-connectionState.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCPeerConnection-constructor.html?rest": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCPeerConnection-constructor.html?interop-2026": {
+        "s": "O",
+        "c": [
+          9,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createAnswer.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createDataChannel.html?rest": {
+        "s": "O",
+        "c": [
+          48,
+          48
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createDataChannel.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createOffer.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createOffer.html?rest": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-description-attributes-timing.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-explicit-rollback-iceGatheringState.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-generateCertificate.html": {
+        "s": "O",
+        "c": [
+          11,
+          11
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getStats-timestamp.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getStats.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getStats.https.html?rest": {
+        "s": "O",
+        "c": [
+          9,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getTransceivers.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-helper-test.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceConnectionState-disconnected.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceConnectionState.https.html": {
+        "s": "O",
+        "c": [
+          11,
+          14
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceGatheringState.html?rest": {
+        "s": "O",
+        "c": [
+          10,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceGatheringState.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-mandatory-getStats.https.html": {
+        "s": "O",
+        "c": [
+          62,
+          73
+        ]
+      },
+      "/webrtc/RTCPeerConnection-ondatachannel.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCPeerConnection-onicecandidateerror.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-onnegotiationneeded.html": {
+        "s": "O",
+        "c": [
+          24,
+          24
+        ]
+      },
+      "/webrtc/RTCPeerConnection-onsignalingstatechanged.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-ontrack.https.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCPeerConnection-operations.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          18,
+          18
+        ]
+      },
+      "/webrtc/RTCPeerConnection-operations.https.html?rest": {
+        "s": "O",
+        "c": [
+          10,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-perfect-negotiation-stress-glare-linear.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-perfect-negotiation-stress-glare.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-perfect-negotiation.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-plan-b-is-not-supported.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-relay-canvas.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-currentTime.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-mute.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          5
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-properties.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-properties.https.html?rest": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-removeTrack.https.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCPeerConnection-restartIce-onnegotiationneeded.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-restartIce.https.html": {
+        "s": "O",
+        "c": [
+          26,
+          28
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setDescription-transceiver.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-answer.html": {
+        "s": "O",
+        "c": [
+          5,
+          7
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-offer.html?rest": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-offer.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-parameterless.https.html?rest": {
+        "s": "O",
+        "c": [
+          10,
+          12
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-parameterless.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-pranswer.html": {
+        "s": "O",
+        "c": [
+          0,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-rollback.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-answer.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-nomsid.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-offer.html?rest": {
+        "s": "E",
+        "c": [
+          8,
+          13
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-offer.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-pranswer.html": {
+        "s": "O",
+        "c": [
+          0,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-replaceTrack.https.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-rollback.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-rollback.html?rest": {
+        "s": "O",
+        "c": [
+          20,
+          20
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-simulcast.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-tracks.https.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCPeerConnection-transceivers.https.html": {
+        "s": "O",
+        "c": [
+          44,
+          44
+        ]
+      },
+      "/webrtc/RTCPeerConnection-transport-stats.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-videoDetectorTest.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnectionIceErrorEvent.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnectionIceEvent-constructor.html": {
+        "s": "O",
+        "c": [
+          6,
+          8
+        ]
+      },
+      "/webrtc/RTCRtpEncodingParameters-codec-opus-stereo.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codec.html?interop-2026": {
+        "s": "O",
+        "c": [
+          18,
+          18
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codec.html?rest": {
+        "s": "T",
+        "c": [
+          3,
+          4
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codecs.html?rest": {
+        "s": "O",
+        "c": [
+          12,
+          20
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codecs.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          18
+        ]
+      },
+      "/webrtc/RTCRtpParameters-encodings.html?interop-2026": {
+        "s": "O",
+        "c": [
+          9,
+          13
+        ]
+      },
+      "/webrtc/RTCRtpParameters-encodings.html?rest": {
+        "s": "O",
+        "c": [
+          31,
+          31
+        ]
+      },
+      "/webrtc/RTCRtpParameters-headerExtensions.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpParameters-maxFramerate.html": {
+        "s": "O",
+        "c": [
+          15,
+          15
+        ]
+      },
+      "/webrtc/RTCRtpParameters-rtcp.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpParameters-transactionId.html?rest": {
+        "s": "O",
+        "c": [
+          5,
+          6
+        ]
+      },
+      "/webrtc/RTCRtpParameters-transactionId.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-audio-jitterBufferTarget-stats.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getCapabilities.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getContributingSources.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getParameters.html?rest": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getParameters.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getStats.https.html?rest": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getStats.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getSynchronizationSources.https.html": {
+        "s": "O",
+        "c": [
+          13,
+          13
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-jitterBufferTarget.html": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-track-settings.tentative.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-video-anyCodec.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-video-jitterBufferTarget-stats.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCRtpSender-encode-same-track-twice.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-getCapabilities.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpSender-getParameters.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-getStats.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          5
+        ]
+      },
+      "/webrtc/RTCRtpSender-replaceTrack.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpSender-replaceTrack.https.html?rest": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCRtpSender-setParameters-keyFrame.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpSender-setParameters.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-setParameters.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpSender-setStreams.https.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCRtpSender-transport.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCRtpSender.https.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-direction.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-setCodecPreferences.html?rest": {
+        "s": "O",
+        "c": [
+          19,
+          19
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-setCodecPreferences.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          5
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stop.html?rest": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stop.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stopping.https.html?rest": {
+        "s": "O",
+        "c": [
+          10,
+          10
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stopping.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver.https.html?rest": {
+        "s": "O",
+        "c": [
+          34,
+          35
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          11,
+          11
+        ]
+      },
+      "/webrtc/RTCSctpTransport-constructor.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCSctpTransport-events.html": {
+        "s": "E",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCSctpTransport-maxChannels.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCSctpTransport-maxChannels.html?interop-2026": {
+        "s": "E",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCSctpTransport-maxMessageSize.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCTrackEvent-constructor.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCTrackEvent-fire.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RollbackEvents.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/back-forward-cache-with-closed-webrtc-connection-ccns.https.tentative.window.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/back-forward-cache-with-closed-webrtc-connection.https.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/back-forward-cache-with-open-webrtc-connection-ccns.https.tentative.window.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/back-forward-cache-with-open-webrtc-connection.https.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/getstats.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/historical.html?rest": {
+        "s": "O",
+        "c": [
+          8,
+          14
+        ]
+      },
+      "/webrtc/historical.html?interop-2026": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/idlharness.https.window.html?exclude=(RTCSessionDescription|RTCPeerConnectionIceErrorEvent|RTCRtpReceiver|RTCDtlsTransport|RTCIceTransport|RTCDTMFToneChangeEvent|RTCError|RTCErrorEvent)": {
+        "s": "O",
+        "c": [
+          360,
+          379
+        ]
+      },
+      "/webrtc/idlharness.https.window.html?include=(RTCSessionDescription|RTCPeerConnectionIceErrorEvent|RTCRtpReceiver|RTCDtlsTransport|RTCIceTransport|RTCDTMFToneChangeEvent|RTCError|RTCErrorEvent)": {
+        "s": "O",
+        "c": [
+          116,
+          141
+        ]
+      },
+      "/webrtc/no-media-call.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/outbound-rtp-encoding-index.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          3
+        ]
+      },
+      "/webrtc/promises-call.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/receiver-track-live.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/recvonly-transceiver-can-become-sendrecv.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/rtp-stats-lifetime.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          3
+        ]
+      },
+      "/webrtc/rtp-stats-lifetime.https.html?rest": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/simplecall-no-ssrcs.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simplecall.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/toJSON.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/toJSON.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/transfer-datachannel.html": {
+        "s": "O",
+        "c": [
+          37,
+          37
+        ]
+      },
+      "/webrtc/simulcast/av1.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/basic.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/getStats.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/h264.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/negotiation-encodings.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          5
+        ]
+      },
+      "/webrtc/simulcast/negotiation-encodings.https.html?rest": {
+        "s": "O",
+        "c": [
+          10,
+          15
+        ]
+      },
+      "/webrtc/simulcast/rid-manipulation.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/simulcast/screenshare.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/setParameters-active.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/simulcast/setParameters-encodings.https.html": {
+        "s": "O",
+        "c": [
+          12,
+          15
+        ]
+      },
+      "/webrtc/simulcast/setParameters-maxFramerate.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/vp8.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/vp9-scalability-mode.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/vp9.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/RTCPeerConnection-payloadTypes.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/additional-codecs.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/av1-profile-asymmetry.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/bundle.https.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          3
+        ]
+      },
+      "/webrtc/protocol/bundle.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/candidate-exchange.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          4
+        ]
+      },
+      "/webrtc/protocol/candidate-exchange.https.html?rest": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/protocol/codecs-filtered-by-direction.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/codecs-subsequent-offer.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/crypto-suite.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          6
+        ]
+      },
+      "/webrtc/protocol/direction.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/dtls-certificates.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/protocol/dtls-close.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/dtls-fingerprint-validation.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/protocol/dtls-setup.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          7
+        ]
+      },
+      "/webrtc/protocol/h264-profile-levels.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          8
+        ]
+      },
+      "/webrtc/protocol/h264-profile-levels.https.html?rest": {
+        "s": "C",
+        "c": [
+          0,
+          0
+        ]
+      },
+      "/webrtc/protocol/h264-unidirectional-codec-offer.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          3
+        ]
+      },
+      "/webrtc/protocol/h265-level-id.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          3
+        ]
+      },
+      "/webrtc/protocol/h265-loopback.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/handover-datachannel.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/handover.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/protocol/ice-state.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          3
+        ]
+      },
+      "/webrtc/protocol/ice-ufragpwd.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/jsep-initial-offer.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/missing-fields.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/msid-generate.html": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/protocol/msid-parse.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/protocol/pt-no-bundle.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/rtp-clockrate.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/rtp-demuxing.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/rtp-extension-support.html": {
+        "s": "O",
+        "c": [
+          5,
+          6
+        ]
+      },
+      "/webrtc/protocol/rtp-headerextensions.html": {
+        "s": "O",
+        "c": [
+          2,
+          6
+        ]
+      },
+      "/webrtc/protocol/rtp-payloadtypes.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/rtp-payloadtypes.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/rtx-codecs.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/protocol/sctp-format.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/sdes-dont-dont-dont.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/simulcast-answer.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/protocol/simulcast-offer.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/split.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/transceiver-mline-recycling.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/protocol/unknown-mediatypes.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/video-codecs.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/protocol/vp8-fmtp.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      }
+    },
+    "chrome": {
+      "/webrtc/legacy/RTCPeerConnection-createOffer-offerToReceive.optional.html": {
+        "s": "O",
+        "c": [
+          18,
+          18
+        ]
+      },
+      "/webrtc/legacy/RTCRtpTransceiver-with-OfferToReceive-options.optional.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/legacy/munge-dont.html": {
+        "s": "O",
+        "c": [
+          1,
+          5
+        ]
+      },
+      "/webrtc/legacy/onaddstream.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/legacy/simplecall_callbacks.optional.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCCertificate-postMessage.html": {
+        "s": "O",
+        "c": [
+          2,
+          3
+        ]
+      },
+      "/webrtc/RTCCertificate.html": {
+        "s": "O",
+        "c": [
+          4,
+          5
+        ]
+      },
+      "/webrtc/RTCConfiguration-bundlePolicy.html": {
+        "s": "O",
+        "c": [
+          17,
+          18
+        ]
+      },
+      "/webrtc/RTCConfiguration-certificates.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceCandidatePoolSize.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceServers.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceServers.html?rest": {
+        "s": "O",
+        "c": [
+          54,
+          58
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceTransportPolicy.html?rest": {
+        "s": "T",
+        "c": [
+          15,
+          19
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceTransportPolicy.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          3
+        ]
+      },
+      "/webrtc/RTCConfiguration-rtcpMuxPolicy.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCConfiguration-validation.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDTMFSender-insertDTMF.https.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCDTMFSender-ontonechange-long.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDTMFSender-ontonechange.https.html?rest": {
+        "s": "O",
+        "c": [
+          11,
+          11
+        ]
+      },
+      "/webrtc/RTCDTMFSender-ontonechange.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          3
+        ]
+      },
+      "/webrtc/RTCDataChannel-GC.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-GC.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-binaryType.window.html": {
+        "s": "O",
+        "c": [
+          10,
+          10
+        ]
+      },
+      "/webrtc/RTCDataChannel-bufferedAmount.html": {
+        "s": "O",
+        "c": [
+          30,
+          30
+        ]
+      },
+      "/webrtc/RTCDataChannel-close.html": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCDataChannel-iceRestart.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCDataChannel-id.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-blob-order.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-array-buffer-negotiated.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-array-buffer.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-blob-negotiated.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-blob.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-string-negotiated.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-string.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send.html": {
+        "s": "O",
+        "c": [
+          24,
+          25
+        ]
+      },
+      "/webrtc/RTCDataChannel-worker-GC.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCDataChannelEvent-constructor.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCDataChannelInit-maxPacketLifeTime-enforce-range.html": {
+        "s": "O",
+        "c": [
+          9,
+          17
+        ]
+      },
+      "/webrtc/RTCDataChannelInit-maxRetransmits-enforce-range.html": {
+        "s": "O",
+        "c": [
+          9,
+          17
+        ]
+      },
+      "/webrtc/RTCDtlsTransport-getRemoteCertificates.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDtlsTransport-state.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDtlsTransport-state.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          3
+        ]
+      },
+      "/webrtc/RTCError.html?interop-2026": {
+        "s": "O",
+        "c": [
+          20,
+          20
+        ]
+      },
+      "/webrtc/RTCError.html?rest": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCIceCandidate-constructor.html": {
+        "s": "O",
+        "c": [
+          18,
+          21
+        ]
+      },
+      "/webrtc/RTCIceConnectionState-candidate-pair.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCIceTransport.html?rest": {
+        "s": "T",
+        "c": [
+          9,
+          16
+        ]
+      },
+      "/webrtc/RTCIceTransport.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-GC.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-SLD-SRD-timing.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-add-track-no-deadlock.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate-connectionSetup.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate-timing.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate.html?interop-2026": {
+        "s": "O",
+        "c": [
+          23,
+          34
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTcpIceCandidate.html": {
+        "s": "O",
+        "c": [
+          63,
+          83
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTrack.https.html": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTransceiver-renegotiation.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTransceiver.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTransceiver.https.html?rest": {
+        "s": "O",
+        "c": [
+          14,
+          16
+        ]
+      },
+      "/webrtc/RTCPeerConnection-canTrickleIceCandidates.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-candidate-in-sdp.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-capture-video.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-connectionState.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCPeerConnection-constructor.html?rest": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCPeerConnection-constructor.html?interop-2026": {
+        "s": "O",
+        "c": [
+          10,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createAnswer.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createDataChannel.html?rest": {
+        "s": "O",
+        "c": [
+          47,
+          48
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createDataChannel.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createOffer.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createOffer.html?rest": {
+        "s": "O",
+        "c": [
+          3,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-description-attributes-timing.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-explicit-rollback-iceGatheringState.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-generateCertificate.html": {
+        "s": "O",
+        "c": [
+          11,
+          11
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getStats-timestamp.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getStats.https.html?rest": {
+        "s": "O",
+        "c": [
+          10,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getStats.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getTransceivers.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-helper-test.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceConnectionState-disconnected.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceConnectionState.https.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceGatheringState.html?rest": {
+        "s": "O",
+        "c": [
+          8,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceGatheringState.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-mandatory-getStats.https.html": {
+        "s": "O",
+        "c": [
+          73,
+          73
+        ]
+      },
+      "/webrtc/RTCPeerConnection-ondatachannel.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCPeerConnection-onicecandidateerror.https.html": {
+        "s": "T",
+        "c": [
+          1,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-onnegotiationneeded.html": {
+        "s": "O",
+        "c": [
+          24,
+          24
+        ]
+      },
+      "/webrtc/RTCPeerConnection-onsignalingstatechanged.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-ontrack.https.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCPeerConnection-operations.https.html?interop-2026": {
+        "s": "E",
+        "c": [
+          1,
+          18
+        ]
+      },
+      "/webrtc/RTCPeerConnection-operations.https.html?rest": {
+        "s": "O",
+        "c": [
+          7,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-perfect-negotiation-stress-glare-linear.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-perfect-negotiation-stress-glare.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-perfect-negotiation.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-plan-b-is-not-supported.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-relay-canvas.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-currentTime.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-mute.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          5
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-properties.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-properties.https.html?rest": {
+        "s": "O",
+        "c": [
+          4,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-removeTrack.https.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCPeerConnection-restartIce-onnegotiationneeded.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-restartIce.https.html": {
+        "s": "O",
+        "c": [
+          25,
+          28
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setDescription-transceiver.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-answer.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-offer.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-offer.html?rest": {
+        "s": "O",
+        "c": [
+          6,
+          7
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-parameterless.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-parameterless.https.html?rest": {
+        "s": "O",
+        "c": [
+          10,
+          12
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-pranswer.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-rollback.html": {
+        "s": "O",
+        "c": [
+          5,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-answer.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-nomsid.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-offer.html?rest": {
+        "s": "O",
+        "c": [
+          10,
+          13
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-offer.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-pranswer.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-replaceTrack.https.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-rollback.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-rollback.html?rest": {
+        "s": "O",
+        "c": [
+          19,
+          20
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-simulcast.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-tracks.https.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription.html": {
+        "s": "O",
+        "c": [
+          6,
+          7
+        ]
+      },
+      "/webrtc/RTCPeerConnection-transceivers.https.html": {
+        "s": "O",
+        "c": [
+          44,
+          44
+        ]
+      },
+      "/webrtc/RTCPeerConnection-transport-stats.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-videoDetectorTest.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnectionIceErrorEvent.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnectionIceEvent-constructor.html": {
+        "s": "O",
+        "c": [
+          6,
+          8
+        ]
+      },
+      "/webrtc/RTCRtpEncodingParameters-codec-opus-stereo.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codec.html?rest": {
+        "s": "O",
+        "c": [
+          3,
+          4
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codec.html?interop-2026": {
+        "s": "O",
+        "c": [
+          18,
+          18
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codecs.html?interop-2026": {
+        "s": "O",
+        "c": [
+          18,
+          18
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codecs.html?rest": {
+        "s": "O",
+        "c": [
+          4,
+          20
+        ]
+      },
+      "/webrtc/RTCRtpParameters-encodings.html?interop-2026": {
+        "s": "O",
+        "c": [
+          11,
+          13
+        ]
+      },
+      "/webrtc/RTCRtpParameters-encodings.html?rest": {
+        "s": "O",
+        "c": [
+          23,
+          31
+        ]
+      },
+      "/webrtc/RTCRtpParameters-headerExtensions.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpParameters-maxFramerate.html": {
+        "s": "O",
+        "c": [
+          15,
+          15
+        ]
+      },
+      "/webrtc/RTCRtpParameters-rtcp.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpParameters-transactionId.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpParameters-transactionId.html?rest": {
+        "s": "O",
+        "c": [
+          3,
+          6
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-audio-jitterBufferTarget-stats.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getCapabilities.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getContributingSources.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getParameters.html?rest": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getParameters.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getStats.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getStats.https.html?rest": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getSynchronizationSources.https.html": {
+        "s": "O",
+        "c": [
+          13,
+          13
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-jitterBufferTarget.html": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-track-settings.tentative.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-video-anyCodec.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-video-jitterBufferTarget-stats.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCRtpSender-encode-same-track-twice.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-getCapabilities.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpSender-getParameters.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-getStats.https.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCRtpSender-replaceTrack.https.html?rest": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCRtpSender-replaceTrack.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpSender-setParameters-keyFrame.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpSender-setParameters.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpSender-setParameters.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-setStreams.https.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCRtpSender-transport.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCRtpSender.https.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-direction.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-setCodecPreferences.html?interop-2026": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-setCodecPreferences.html?rest": {
+        "s": "O",
+        "c": [
+          17,
+          19
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stop.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stop.html?rest": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stopping.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stopping.https.html?rest": {
+        "s": "O",
+        "c": [
+          6,
+          10
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          11,
+          11
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver.https.html?rest": {
+        "s": "O",
+        "c": [
+          34,
+          35
+        ]
+      },
+      "/webrtc/RTCSctpTransport-constructor.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCSctpTransport-events.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCSctpTransport-maxChannels.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCSctpTransport-maxChannels.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCSctpTransport-maxMessageSize.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCTrackEvent-constructor.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCTrackEvent-fire.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RollbackEvents.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/back-forward-cache-with-closed-webrtc-connection-ccns.https.tentative.window.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/back-forward-cache-with-closed-webrtc-connection.https.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/back-forward-cache-with-open-webrtc-connection-ccns.https.tentative.window.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/back-forward-cache-with-open-webrtc-connection.https.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/getstats.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/historical.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          5
+        ]
+      },
+      "/webrtc/historical.html?rest": {
+        "s": "O",
+        "c": [
+          8,
+          14
+        ]
+      },
+      "/webrtc/idlharness.https.window.html?exclude=(RTCSessionDescription|RTCPeerConnectionIceErrorEvent|RTCRtpReceiver|RTCDtlsTransport|RTCIceTransport|RTCDTMFToneChangeEvent|RTCError|RTCErrorEvent)": {
+        "s": "O",
+        "c": [
+          364,
+          379
+        ]
+      },
+      "/webrtc/idlharness.https.window.html?include=(RTCSessionDescription|RTCPeerConnectionIceErrorEvent|RTCRtpReceiver|RTCDtlsTransport|RTCIceTransport|RTCDTMFToneChangeEvent|RTCError|RTCErrorEvent)": {
+        "s": "O",
+        "c": [
+          129,
+          141
+        ]
+      },
+      "/webrtc/no-media-call.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/outbound-rtp-encoding-index.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/promises-call.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/receiver-track-live.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/recvonly-transceiver-can-become-sendrecv.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/rtp-stats-lifetime.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/rtp-stats-lifetime.https.html?rest": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/simplecall-no-ssrcs.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simplecall.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/toJSON.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/toJSON.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/transfer-datachannel.html": {
+        "s": "O",
+        "c": [
+          37,
+          37
+        ]
+      },
+      "/webrtc/simulcast/av1.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/simulcast/basic.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/getStats.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/simulcast/h264.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/negotiation-encodings.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          5
+        ]
+      },
+      "/webrtc/simulcast/negotiation-encodings.https.html?rest": {
+        "s": "O",
+        "c": [
+          6,
+          15
+        ]
+      },
+      "/webrtc/simulcast/rid-manipulation.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/screenshare.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/setParameters-active.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/simulcast/setParameters-encodings.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          15
+        ]
+      },
+      "/webrtc/simulcast/setParameters-maxFramerate.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/simulcast/vp8.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/vp9-scalability-mode.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/vp9.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/RTCPeerConnection-payloadTypes.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/additional-codecs.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/av1-profile-asymmetry.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/bundle.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/bundle.https.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          3
+        ]
+      },
+      "/webrtc/protocol/candidate-exchange.https.html?rest": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/protocol/candidate-exchange.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/protocol/codecs-filtered-by-direction.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/codecs-subsequent-offer.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/crypto-suite.https.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/protocol/direction.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/dtls-certificates.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/protocol/dtls-close.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/dtls-fingerprint-validation.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/protocol/dtls-setup.https.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/protocol/h264-profile-levels.https.html?rest": {
+        "s": "O",
+        "c": [
+          0,
+          11
+        ]
+      },
+      "/webrtc/protocol/h264-profile-levels.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/protocol/h264-unidirectional-codec-offer.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          3
+        ]
+      },
+      "/webrtc/protocol/h265-level-id.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          3
+        ]
+      },
+      "/webrtc/protocol/h265-loopback.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/handover-datachannel.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/handover.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/ice-state.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/protocol/ice-ufragpwd.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/jsep-initial-offer.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/missing-fields.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/msid-generate.html": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/protocol/msid-parse.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/protocol/pt-no-bundle.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/rtp-clockrate.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/rtp-demuxing.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/rtp-extension-support.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/protocol/rtp-headerextensions.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/protocol/rtp-payloadtypes.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/rtp-payloadtypes.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/rtx-codecs.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/protocol/sctp-format.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/sdes-dont-dont-dont.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/simulcast-answer.html": {
+        "s": "O",
+        "c": [
+          1,
+          3
+        ]
+      },
+      "/webrtc/protocol/simulcast-offer.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/split.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/transceiver-mline-recycling.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/unknown-mediatypes.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/video-codecs.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/protocol/vp8-fmtp.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      }
+    },
+    "safari": {
+      "/webrtc/RTCConfiguration-certificates.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-bufferedAmount.html": {
+        "s": "O",
+        "c": [
+          30,
+          30
+        ]
+      },
+      "/webrtc/RTCPeerConnection-SLD-SRD-timing.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-helper-test.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-perfect-negotiation-stress-glare-linear.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setDescription-transceiver.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-rollback.html": {
+        "s": "O",
+        "c": [
+          5,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-nomsid.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-replaceTrack.https.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-videoDetectorTest.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpEncodingParameters-codec-opus-stereo.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codec.html?rest": {
+        "s": "T",
+        "c": [
+          2,
+          4
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codec.html?interop-2026": {
+        "s": "T",
+        "c": [
+          0,
+          18
+        ]
+      },
+      "/webrtc/RTCSctpTransport-maxMessageSize.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/protocol/dtls-close.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/h265-loopback.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/handover-datachannel.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/rtp-clockrate.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/unknown-mediatypes.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/recvonly-transceiver-can-become-sendrecv.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/rtp-stats-lifetime.https.html?rest": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/rtp-stats-lifetime.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/toJSON.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/toJSON.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceTransportPolicy.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceTransportPolicy.html?rest": {
+        "s": "T",
+        "c": [
+          15,
+          19
+        ]
+      },
+      "/webrtc/RTCDataChannel-GC.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-GC.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-binaryType.window.html": {
+        "s": "O",
+        "c": [
+          10,
+          10
+        ]
+      },
+      "/webrtc/RTCDataChannelInit-maxPacketLifeTime-enforce-range.html": {
+        "s": "O",
+        "c": [
+          17,
+          17
+        ]
+      },
+      "/webrtc/RTCPeerConnection-GC.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate.html?interop-2026": {
+        "s": "O",
+        "c": [
+          23,
+          34
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-canTrickleIceCandidates.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createDataChannel.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createDataChannel.html?rest": {
+        "s": "O",
+        "c": [
+          47,
+          48
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getTransceivers.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceGatheringState.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceGatheringState.html?rest": {
+        "s": "O",
+        "c": [
+          8,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-ondatachannel.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCPeerConnection-onsignalingstatechanged.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-currentTime.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-pranswer.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-pranswer.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnectionIceErrorEvent.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpParameters-encodings.html?interop-2026": {
+        "s": "O",
+        "c": [
+          7,
+          13
+        ]
+      },
+      "/webrtc/RTCRtpParameters-encodings.html?rest": {
+        "s": "O",
+        "c": [
+          23,
+          31
+        ]
+      },
+      "/webrtc/RTCRtpParameters-maxFramerate.html": {
+        "s": "O",
+        "c": [
+          11,
+          15
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-audio-jitterBufferTarget-stats.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-getCapabilities.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCSctpTransport-events.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/back-forward-cache-with-closed-webrtc-connection-ccns.https.tentative.window.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/legacy/munge-dont.html": {
+        "s": "O",
+        "c": [
+          3,
+          5
+        ]
+      },
+      "/webrtc/legacy/simplecall_callbacks.optional.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/dtls-certificates.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/protocol/h264-unidirectional-codec-offer.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          3
+        ]
+      },
+      "/webrtc/protocol/ice-state.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          3
+        ]
+      },
+      "/webrtc/protocol/jsep-initial-offer.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/msid-parse.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/protocol/rtp-demuxing.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/rtp-extension-support.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/protocol/simulcast-answer.html": {
+        "s": "O",
+        "c": [
+          1,
+          3
+        ]
+      },
+      "/webrtc/simulcast/vp9.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCConfiguration-validation.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-blob-order.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-blob.window.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send.html": {
+        "s": "O",
+        "c": [
+          24,
+          25
+        ]
+      },
+      "/webrtc/RTCPeerConnection-add-track-no-deadlock.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-connectionState.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getStats.https.html?rest": {
+        "s": "O",
+        "c": [
+          6,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getStats.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          7,
+          8
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-offer.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-offer.html?rest": {
+        "s": "E",
+        "c": [
+          6,
+          13
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-tracks.https.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCPeerConnection-transceivers.https.html": {
+        "s": "O",
+        "c": [
+          44,
+          44
+        ]
+      },
+      "/webrtc/RTCPeerConnectionIceEvent-constructor.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getCapabilities.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getStats.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          4
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getStats.https.html?rest": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-track-settings.tentative.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-video-anyCodec.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-video-jitterBufferTarget-stats.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-replaceTrack.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpSender-replaceTrack.https.html?rest": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCRtpSender-setParameters.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-setParameters.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          2
+        ]
+      },
+      "/webrtc/outbound-rtp-encoding-index.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          3
+        ]
+      },
+      "/webrtc/protocol/additional-codecs.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/crypto-suite.https.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/protocol/h264-profile-levels.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/protocol/h264-profile-levels.https.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          11
+        ]
+      },
+      "/webrtc/protocol/rtx-codecs.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/protocol/vp8-fmtp.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/receiver-track-live.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/simulcast/screenshare.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-string.window.html": {
+        "s": "E",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannelEvent-constructor.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCDtlsTransport-getRemoteCertificates.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCIceTransport.html?rest": {
+        "s": "T",
+        "c": [
+          8,
+          16
+        ]
+      },
+      "/webrtc/RTCIceTransport.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createAnswer.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-explicit-rollback-iceGatheringState.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-getStats-timestamp.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-offer.html?interop-2026": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-offer.html?rest": {
+        "s": "O",
+        "c": [
+          6,
+          7
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getParameters.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getParameters.html?rest": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-jitterBufferTarget.html": {
+        "s": "O",
+        "c": [
+          0,
+          12
+        ]
+      },
+      "/webrtc/RTCRtpSender-encode-same-track-twice.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender-getParameters.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpSender.https.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stopping.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stopping.https.html?rest": {
+        "s": "O",
+        "c": [
+          6,
+          10
+        ]
+      },
+      "/webrtc/RTCSctpTransport-maxChannels.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCSctpTransport-maxChannels.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/back-forward-cache-with-closed-webrtc-connection.https.window.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/back-forward-cache-with-open-webrtc-connection.https.window.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/idlharness.https.window.html?include=(RTCSessionDescription|RTCPeerConnectionIceErrorEvent|RTCRtpReceiver|RTCDtlsTransport|RTCIceTransport|RTCDTMFToneChangeEvent|RTCError|RTCErrorEvent)": {
+        "s": "O",
+        "c": [
+          123,
+          141
+        ]
+      },
+      "/webrtc/idlharness.https.window.html?exclude=(RTCSessionDescription|RTCPeerConnectionIceErrorEvent|RTCRtpReceiver|RTCDtlsTransport|RTCIceTransport|RTCDTMFToneChangeEvent|RTCError|RTCErrorEvent)": {
+        "s": "O",
+        "c": [
+          362,
+          379
+        ]
+      },
+      "/webrtc/legacy/onaddstream.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/h265-level-id.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          3
+        ]
+      },
+      "/webrtc/protocol/handover.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/missing-fields.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/pt-no-bundle.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/rtp-headerextensions.html": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/protocol/rtp-payloadtypes.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/rtp-payloadtypes.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/sctp-format.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/simulcast-offer.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/video-codecs.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/simulcast/negotiation-encodings.https.html?rest": {
+        "s": "O",
+        "c": [
+          6,
+          15
+        ]
+      },
+      "/webrtc/simulcast/negotiation-encodings.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/simulcast/setParameters-maxFramerate.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/transfer-datachannel.html": {
+        "s": "O",
+        "c": [
+          37,
+          37
+        ]
+      },
+      "/webrtc/RTCConfiguration-bundlePolicy.html": {
+        "s": "O",
+        "c": [
+          17,
+          18
+        ]
+      },
+      "/webrtc/RTCConfiguration-rtcpMuxPolicy.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCDTMFSender-insertDTMF.https.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-array-buffer-negotiated.window.html": {
+        "s": "E",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-string-negotiated.window.html": {
+        "s": "E",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCError.html?interop-2026": {
+        "s": "O",
+        "c": [
+          20,
+          20
+        ]
+      },
+      "/webrtc/RTCError.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCIceCandidate-constructor.html": {
+        "s": "O",
+        "c": [
+          18,
+          21
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTrack.https.html": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTransceiver-renegotiation.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-constructor.html?rest": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCPeerConnection-constructor.html?interop-2026": {
+        "s": "O",
+        "c": [
+          10,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-description-attributes-timing.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceConnectionState.https.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCPeerConnection-perfect-negotiation.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-relay-canvas.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-restartIce-onnegotiationneeded.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription.html": {
+        "s": "O",
+        "c": [
+          6,
+          7
+        ]
+      },
+      "/webrtc/RTCPeerConnection-transport-stats.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpParameters-headerExtensions.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpParameters-rtcp.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpSender-setParameters-keyFrame.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCSctpTransport-constructor.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/back-forward-cache-with-open-webrtc-connection-ccns.https.tentative.window.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/promises-call.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/RTCPeerConnection-payloadTypes.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/av1-profile-asymmetry.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/protocol/codecs-filtered-by-direction.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/transceiver-mline-recycling.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/simplecall-no-ssrcs.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/rid-manipulation.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCCertificate.html": {
+        "s": "O",
+        "c": [
+          4,
+          5
+        ]
+      },
+      "/webrtc/RTCDataChannel-id.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCPeerConnection-capture-video.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-mandatory-getStats.https.html": {
+        "s": "O",
+        "c": [
+          70,
+          73
+        ]
+      },
+      "/webrtc/RTCPeerConnection-onnegotiationneeded.html": {
+        "s": "O",
+        "c": [
+          24,
+          24
+        ]
+      },
+      "/webrtc/RTCPeerConnection-perfect-negotiation-stress-glare.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-removeTrack.https.html": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-parameterless.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-parameterless.https.html?rest": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/RTCRtpParameters-transactionId.html?rest": {
+        "s": "O",
+        "c": [
+          3,
+          6
+        ]
+      },
+      "/webrtc/RTCRtpParameters-transactionId.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpSender-setStreams.https.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCRtpSender-transport.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stop.html?rest": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-stop.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          10,
+          11
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver.https.html?rest": {
+        "s": "O",
+        "c": [
+          34,
+          35
+        ]
+      },
+      "/webrtc/no-media-call.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/direction.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/protocol/dtls-fingerprint-validation.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/protocol/dtls-setup.https.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/protocol/ice-ufragpwd.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCCertificate-postMessage.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCDTMFSender-ontonechange-long.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-close.html": {
+        "s": "T",
+        "c": [
+          11,
+          12
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-blob-negotiated.window.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannelInit-maxRetransmits-enforce-range.html": {
+        "s": "O",
+        "c": [
+          17,
+          17
+        ]
+      },
+      "/webrtc/RTCDtlsTransport-state.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCDtlsTransport-state.html?rest": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCIceConnectionState-candidate-pair.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate-connectionSetup.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addIceCandidate-timing.https.html": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-generateCertificate.html": {
+        "s": "O",
+        "c": [
+          11,
+          11
+        ]
+      },
+      "/webrtc/RTCPeerConnection-iceConnectionState-disconnected.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-operations.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          18,
+          18
+        ]
+      },
+      "/webrtc/RTCPeerConnection-operations.https.html?rest": {
+        "s": "O",
+        "c": [
+          7,
+          10
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-mute.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          5
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-properties.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-remote-track-properties.https.html?rest": {
+        "s": "O",
+        "c": [
+          6,
+          6
+        ]
+      },
+      "/webrtc/RTCPeerConnection-restartIce.https.html": {
+        "s": "O",
+        "c": [
+          25,
+          28
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription-answer.html": {
+        "s": "O",
+        "c": [
+          6,
+          7
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-rollback.html?interop-2026": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-rollback.html?rest": {
+        "s": "O",
+        "c": [
+          19,
+          20
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-simulcast.https.html": {
+        "s": "O",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCRtpReceiver.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/RTCRtpSender-getStats.https.html": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-direction.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCTrackEvent-constructor.html": {
+        "s": "O",
+        "c": [
+          7,
+          7
+        ]
+      },
+      "/webrtc/historical.html?interop-2026": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/historical.html?rest": {
+        "s": "O",
+        "c": [
+          14,
+          14
+        ]
+      },
+      "/webrtc/legacy/RTCPeerConnection-createOffer-offerToReceive.optional.html": {
+        "s": "O",
+        "c": [
+          4,
+          18
+        ]
+      },
+      "/webrtc/legacy/RTCRtpTransceiver-with-OfferToReceive-options.optional.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          4
+        ]
+      },
+      "/webrtc/protocol/bundle.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/bundle.https.html?rest": {
+        "s": "O",
+        "c": [
+          2,
+          3
+        ]
+      },
+      "/webrtc/protocol/candidate-exchange.https.html?rest": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/protocol/candidate-exchange.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/protocol/codecs-subsequent-offer.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/msid-generate.html": {
+        "s": "O",
+        "c": [
+          12,
+          12
+        ]
+      },
+      "/webrtc/protocol/sdes-dont-dont-dont.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/simulcast/basic.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/getStats.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/simulcast/h264.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/vp8.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceCandidatePoolSize.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceServers.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCConfiguration-iceServers.html?rest": {
+        "s": "O",
+        "c": [
+          52,
+          58
+        ]
+      },
+      "/webrtc/RTCDTMFSender-ontonechange.https.html?rest": {
+        "s": "O",
+        "c": [
+          11,
+          11
+        ]
+      },
+      "/webrtc/RTCDTMFSender-ontonechange.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCDataChannel-iceRestart.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCDataChannel-send-close-array-buffer.window.html": {
+        "s": "E",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/RTCDataChannel-worker-GC.html": {
+        "s": "O",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTcpIceCandidate.html": {
+        "s": "O",
+        "c": [
+          63,
+          83
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTransceiver.https.html?rest": {
+        "s": "O",
+        "c": [
+          14,
+          16
+        ]
+      },
+      "/webrtc/RTCPeerConnection-addTransceiver.https.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-candidate-in-sdp.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createOffer.html?interop-2026": {
+        "s": "O",
+        "c": [
+          4,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-createOffer.html?rest": {
+        "s": "O",
+        "c": [
+          3,
+          4
+        ]
+      },
+      "/webrtc/RTCPeerConnection-onicecandidateerror.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          2
+        ]
+      },
+      "/webrtc/RTCPeerConnection-ontrack.https.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RTCPeerConnection-plan-b-is-not-supported.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setLocalDescription.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCPeerConnection-setRemoteDescription-answer.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codecs.html?rest": {
+        "s": "O",
+        "c": [
+          4,
+          20
+        ]
+      },
+      "/webrtc/RTCRtpParameters-codecs.html?interop-2026": {
+        "s": "O",
+        "c": [
+          16,
+          18
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getContributingSources.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          2
+        ]
+      },
+      "/webrtc/RTCRtpReceiver-getSynchronizationSources.https.html": {
+        "s": "O",
+        "c": [
+          12,
+          13
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-setCodecPreferences.html?rest": {
+        "s": "O",
+        "c": [
+          19,
+          19
+        ]
+      },
+      "/webrtc/RTCRtpTransceiver-setCodecPreferences.html?interop-2026": {
+        "s": "O",
+        "c": [
+          5,
+          5
+        ]
+      },
+      "/webrtc/RTCTrackEvent-fire.html": {
+        "s": "O",
+        "c": [
+          9,
+          9
+        ]
+      },
+      "/webrtc/RollbackEvents.https.html": {
+        "s": "O",
+        "c": [
+          8,
+          8
+        ]
+      },
+      "/webrtc/getstats.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/protocol/split.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simplecall.https.html": {
+        "s": "O",
+        "c": [
+          1,
+          1
+        ]
+      },
+      "/webrtc/simulcast/av1.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      },
+      "/webrtc/simulcast/setParameters-active.https.html": {
+        "s": "O",
+        "c": [
+          3,
+          3
+        ]
+      },
+      "/webrtc/simulcast/setParameters-encodings.https.html": {
+        "s": "O",
+        "c": [
+          2,
+          15
+        ]
+      },
+      "/webrtc/simulcast/vp9-scalability-mode.https.html": {
+        "s": "T",
+        "c": [
+          0,
+          1
+        ]
+      }
+    }
+  }
+}

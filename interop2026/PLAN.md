@@ -42,8 +42,8 @@ The lead developer on this project, Byron Campen, has been filing bugs in Bugzil
 
 We have a spreadsheet in Google Sheets with our initial project triage notes. The two tabs are available in the working directory as:
 
-- `WebRTC Interop 2026 - Test List.csv` - initial test inventory and notes
-- `WebRTC Interop 2026 - Aggregate Bugs.csv` - meta bugs that play into multiple tests.
+- `resources/WebRTC Interop 2026 - Test List.csv` - initial test inventory and notes
+- `resources/WebRTC Interop 2026 - Aggregate Bugs.csv` - meta bugs that play into multiple tests.
 
 Notes on these spreadsheets:
 
@@ -86,20 +86,25 @@ Much of this work will be associated with WebRTC specification compliance. In th
 Report what you have found using the general format below, and save this in the working directory as `report-<YYYY-MM-DD>.md`.
 
 ```markdown
-**Header** — Time and Date, WPT run date, commit, browser versions
+**Header** — Time and date, WPT test run time and date and commit, browser versions tested
 **Links** - Link to interop 2026 wpt dashboard, link to interop 2026 meta bug
-**Score Summary** — Table of passing/total/percentage for Firefox, Chrome, and Safari across all tracked tests
-**Notable Changes** — A per-report "Notable Changes Since Triage Sheet" delta mini-report. Include -
-   - A test change summary: points added (new bugs/tests), points removed (fixed), and net change.
-   - Tests fully passing our criteria.
-   - New bugs filed since the last report.
-   - Tracked bugs that have closed since the last report.
-   - Anything else notable.
-**Assigned Bugs** - Itemize bugs in Bugzilla that are currently associated with this project and assigned to a member of the team.
-**Priority Assessment** — Grouped view of the work: high-priority unblocked items, quick wins, items needing investigation, and items on hold
-**Aggregate Bugs** — Bugs that affect multiple test files, with a count of subtests and files impacted per bug
-**Gap Analysis** — Tests with no bug filed; tests suspected to be WPT test issues rather than Firefox bugs; H264 infrastructure failures that
-   are blocking score accuracy
+
+**Project Summary**
+   **Score Summary** — Table of passing/total/percentage for Firefox, Chrome, and Safari across all tracked tests
+   **Notable Changes** — A per-report "Notable Changes Since Triage Sheet" delta mini-report. Include -
+      - A test change summary: points added (new bugs/tests), points removed (fixed), and net change.
+      - Tests fully passing our criteria.
+      - New bugs filed since the last report.
+      - Tracked bugs that have closed since the last report.
+      - Anything else notable.
+   **Assigned Bugs** - Itemize bugs in Bugzilla that are currently associated with this project and assigned to a member of the team.
+
+**Project Development**
+   **Priority Assessment** — Grouped view of the work: high-priority unblocked items, quick wins, items needing investigation, and items on hold
+   **Aggregate Bugs** — Bugs that affect multiple test files, with a count of subtests and files impacted per bug.
+   **Gap Analysis** — Tests with no bug filed; tests suspected to be WPT test issues rather than Firefox bugs; H264 infrastructure failures that
+      are blocking score accuracy.
+
 **Test Inventory** — One entry per test, grouped by directory (`webrtc/`, `webrtc/protocol/`, `webrtc/simulcast/`). Each entry includes:
    - WPT path
    - current scores for all three browsers (green check if Firefox has a perfect score)
@@ -108,8 +113,10 @@ Report what you have found using the general format below, and save this in the 
    - spec area
    - notes
    - size/importance
+
 **Experimental Burndown** - Let every sub-test that's failing represent 1 point. Based on the burndown of points thus far, project out
    approximately when we will reach zero.
+
 **Experimental Dependency Graph** — Several projects block each other (e.g., 1765851 → 1765852 → RTCRtpReceiver). A visual or tabular
    dependency map would help sequence work.
 ```
