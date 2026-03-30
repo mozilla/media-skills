@@ -10,16 +10,27 @@ The Interop (Web Platform Tests) initiative is a cross-browser collaboration (Mo
 
 Improve Firefox scores in specific WebRTC-related web platform tests. The WPT dashboard is configured to track the test failures we will need to address. The WebRTC-specific dashboard pages are:
 
-- [webrtc-encoded-transform](https://wpt.fyi/results/webrtc-encoded-transform?label=master&label=experimental&aligned&view=interop&q=label%3Ainterop-2026-webrtc)
 - [webrtc](https://wpt.fyi/results/webrtc?label=master&label=experimental&aligned&view=interop&q=label%3Ainterop-2026-webrtc)
 - [webrtc/protocol](https://wpt.fyi/results/webrtc/protocol?label=master&label=experimental&aligned&view=interop&q=label%3Ainterop-2026-webrtc)
 - [webrtc/simulcast](https://wpt.fyi/results/webrtc/simulcast?label=master&label=experimental&aligned&view=interop&q=label%3Ainterop-2026-webrtc)
+- [webrtc-encoded-transform](https://wpt.fyi/results/webrtc-encoded-transform?label=master&label=experimental&aligned&view=interop&q=label%3Ainterop-2026-webrtc)
 
-As part of this project, engineering teams at Mozilla, Google, and Apple agreed that the WebRTC tests each browser vendor will work on are tests that **fail in only one of the three main browsers** (Chrome, Firefox, and Safari). For example:
+As part of this project, engineering teams at Mozilla, Google, and Apple agreed that the WebRTC tests each browser vendor will work on are tests that **fail in only one of the three main browsers** (Chrome, Firefox, and Safari). 
 
-- If a WebRTC test is failing in Firefox but also fails in Chrome or Safari, we would **not** include it in our tracking.
-- If a test fails only in Firefox, does not fail in Chrome or Safari, and is tracked by the interop-2026 dashboard, we **would** include it in our planning.
-- For this research we will concentrate on the 'label=experimental' wpt dashboard and test runs.
+Terminology:
+- A wpt subtest is a single, individual wpt platform test contained in a wpt test file. For our score tracking, these are the individual 'tests' we will be tracking.
+- A wpt test, typically an html file that has a path associated with it, contains a set of related wpt subtests. For example - 'webrtc/protocol/additional-codecs.html'. 
+- A group of tests make up a test suite. For example there is a webrtc protocol suite in 'webrtc/protocol' and a css viewport suite in 'css/css-viewport'.
+- Sets of test suites make up each of the interop test **focus areas**.
+- The tests we will track for this project are contained in the **WebRTC Focus Area**.
+
+Identifying tests we will track:
+- If a wpt subtest is reliably failing in Firefox and also reliably fails in Chrome or Safari, we should **not** include it in our tracking.
+- If a wpt subtest is reliably failing in Firefox, but does not reliably fail in Chrome or Safari, and is tracked by an interop-2026 WebRTC focus area, we **should** include it in our tracking.
+- Note, 'reliably' implies the test exibits the behavior over multiple subsequent test runs.
+- For this research we will concentrate on the 'label=experimental' wpt dashboard scores and test runs.
+
+Be careful about differentiating between 'subtests' and 'tests'. In documentation the term 'test' can be used to describe subtests or test files. For scoring in our work here, we are tracking succeeding and failing subtests scores, categroized by tests (the test filename) and test suites (webrtc, protocol, simulcast, encoded-transform). 
 
 ## Bugzilla
 
@@ -31,10 +42,10 @@ The lead developer on this project, Byron Campen, has been filing bugs in Bugzil
 
 | Engineer | Bugzilla Email | GitHub Account |
 |----------|----------------|----------------|
-| Byron Campen | docfaraday@gmail.com | https://github.com/docfaraday |
-| Michael Froman | mfroman@nostrum.com |
 | Daniel Baker | dbaker@mozilla.com |
 | Jan-Ivar Bruaroey | jib@mozilla.com | https://github.com/jan-ivar |
+| Byron Campen | docfaraday@gmail.com | https://github.com/docfaraday |
+| Michael Froman | mfroman@nostrum.com |
 | Nico Grunbam | na-g@nostrum.com |
 | Andreas Pehrson | apehrson@mozilla.com |
 
@@ -47,79 +58,47 @@ We have a spreadsheet in Google Sheets with our initial project triage notes. Th
 
 Notes on these spreadsheets:
 
+- The **FILE** column contains the wpt test name (filename).
+- The tests itemized here are all tracked by the WebRTC interop 2026 focus area.
 - Pay close attention to the **NOTES**, **IMPORTANCE**, and **EXISTING BUG(S)** columns for each test.
 - The rows of the main sheet include WPT test scores that may be out of date — the WPT dashboard is the source of truth for current scores.
-- Useful for tracking overall progress since the spreadsheets represent our initial understanding of scope.
+- Useful for tracking overall progress since these spreadsheets **represent our initial understanding of project scope**.
 
 ## Spec Coverage
 
 Much of this work will be associated with WebRTC specification compliance. In the documentation we put together, we should track the areas of the specification that individual tests are associated with.
 * [WebRTC Specification](https://w3c.github.io/webrtc-pc/)
 
-## Initial Research Goals
+## Research Goals
 
 - Create a **Test Inventory** — Itemize the individual web platform tests we will need to improve. With each test entry include:
   - A summary of why the test fails in Firefox based on WPT output
   - Spreadsheet information: Notes, Importance, Bug relationships, Owner if available, Importance / size if known
   - The current Firefox score for the test from wpt.fyi
   - A velocity tracking field - "first seen passing" date
-- **Connect development work** — Using spreadsheet and the task related information in Bugzilla, connect development work
-   needed to improve test scores with individual tests in our inventory. Sanity check the relationships. Also note assignment
-   of work to team members, which provides some input into the development of our roadmap.
+- **Connect development work** — Using spreadsheet and the task related information in Bugzilla, connect development work needed to improve test scores with individual tests in our inventory. Sanity check the relationships. Also note assignment of work to team members, which provides some input into the development of our roadmap.
 - **Search for unknown dependencies** — Using the bugs we already know about, search for additional dependencies in Bugzilla.
+  - **Comment scan** — Run `resources/scripts/scan_bug_comments.py` to scan Bugzilla comments on all tracked bugs for new w3c spec links and WPT repo links not yet recorded in `test-annotations.json`. For each find:
+    - If clearly connected to a tracked test → add to `_github_issues` and the relevant test annotation.
+    - If connection is uncertain → add to `_gap_analysis.comment_scan` in `test-annotations.json` for future investigation.
 - **Define small projects** that encompass accomplishing improving a specific set of test scores. Score these by test score impact.
 - **Associate tests with projects** - Keep track of what work will be needed (including the bugs that will need ot be fixed) to address each test.
-- **Gap analysis** — Identify gaps between our test lists and Bugzilla.
+- **Experimental Dependency Graph** — Several projects block each other (e.g., 1765851 → 1765852 → RTCRtpReceiver). Develop a project dependency map to help sequence work.
+- **Gap analysis** - Identify unknown gaps between our test lists and Bugzilla or Github. Check for tracked tests with multi-browser failures in the latest test score data. (Sometimes tests fail intermittently.) We should call these out as something to keep track of.
 
 ## Caching
 
 - Don't cache Bugzilla data, always refresh the information we need.
-- Cache browser WebRTC scores (total and on a per-test basis) when we retreive them in a local json file. We can use this for
-   generating change graphs. Data should have date and time the data was fetched and the each test score for all browsers.
-- Load `resources/test-annotations.json` at the start of each run. This file captures non-obvious per-test context that is not
-   derivable from WPT scores or Bugzilla: confirmed WPT flaws, invalid tests, deprecated path changes, risky fixes, on-hold
-   status, and first-passing dates. Use it to avoid re-investigating known issues. Update it when a run produces new findings
+- Cache browser WebRTC scores (total and on a per-test basis) when we retreive them in a local json file. We can use this for generating change graphs. Data should have date and time the data was fetched and the each test score for all browsers.
+- Load `resources/test-annotations.json` at the start of each run. This file captures non-obvious per-test context that is not derivable from WPT scores or Bugzilla: confirmed WPT flaws, invalid tests, deprecated path changes, risky fixes, on-hold status, and first-passing dates. Use it to avoid re-investigating known issues. Update it when a run produces new findings.
    (e.g. a test changes status, a path changes, a fix lands).
 
 ## Report
 
-Report what you have found using the general format below, and save this in the working directory as `report-<YYYY-MM-DD>.md`.
+Save output in the working directory as `report-<YYYY-MM-DD>.md`, following the structure in [`report-template.md`](report-template.md). Fill in all placeholder values; remove any sections that have no content for the current run.
 
-```markdown
-**Header** — Time and date, WPT test run time and date and commit, browser versions tested
-**Links** - Link to interop 2026 wpt dashboard, link to interop 2026 meta bug
-
-**Project Summary**
-   **Score Summary** — Table of passing/total/percentage for Firefox, Chrome, and Safari across all tracked tests
-   **Notable Changes** — A per-report "Notable Changes Since Triage Sheet" delta mini-report. Include -
-      - A test change summary: points added (new bugs/tests), points removed (fixed), and net change.
-      - Tests fully passing our criteria.
-      - New bugs filed since the last report.
-      - Tracked bugs that have closed since the last report.
-      - Anything else notable.
-   **Assigned Bugs** - Itemize bugs in Bugzilla that are currently associated with this project and assigned to a member of the team.
-
-**Project Development**
-   **Priority Assessment** — Grouped view of the work: high-priority unblocked items, quick wins, items needing investigation, and items on hold
-   **Aggregate Bugs** — Bugs that affect multiple test files, with a count of subtests and files impacted per bug.
-   **Gap Analysis** — Tests with no bug filed; tests suspected to be WPT test issues rather than Firefox bugs; H264 infrastructure failures that
-      are blocking score accuracy.
-
-**Test Inventory** — One entry per test, grouped by directory (`webrtc/`, `webrtc/protocol/`, `webrtc/simulcast/`). Each entry includes:
-   - WPT path
-   - current scores for all three browsers (green check if Firefox has a perfect score)
-   - owner
-   - linked bugs (or project(s))
-   - spec area
-   - notes
-   - size/importance
-
-**Experimental Burndown** - Let every sub-test that's failing represent 1 point. Based on the burndown of points thus far, project out
-   approximately when we will reach zero.
-
-**Experimental Dependency Graph** — Several projects block each other (e.g., 1765851 → 1765852 → RTCRtpReceiver). A visual or tabular
-   dependency map would help sequence work.
-```
+**Format Notes**
+- Use 'linkable' format for all bug IDs, for example - [1234567](https://bugzilla.mozilla.org/show_bug.cgi?id=1234567)
 
 ## Suggest and Exit
 
@@ -183,6 +162,12 @@ GET https://api.github.com/repos/w3c/webrtc-pc/issues/NNNN
 
 For each tracked issue, fetch current `state` (open/closed) and note any linked PRs in the closing event.
 A newly-closed spec issue may change a test's `on-hold` status in `test-annotations.json`.
+
+To discover new GitHub issues not yet recorded, run the comment scan script:
+```
+python3 resources/scripts/scan_bug_comments.py
+```
+This scans all Bugzilla comments on tracked bugs and reports w3c and WPT GitHub links not in `test-annotations.json`.
 
 ### Scripts and temporary data
 
