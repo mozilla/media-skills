@@ -181,6 +181,43 @@ Always exclude bugs belonging to core security groups from search results.
 
 ---
 
+## Component Owners
+
+When a bug is assigned to a component owner, this can be a strong signal of the bug's relevance and severity. Component owners are typically responsible for triaging and fixing bugs in their assigned components, so if a bug is assigned to a component owner, it may indicate that the issue has been recognized as significant enough to warrant their attention.
+
+When analyzing a bug, check if it is assigned to a component owner. If it is, note the name of the component owner and consider this as part of your assessment of the bug's severity and impact. You may also want to look up the component owner's history of handling similar bugs to gain insights into how they might approach this issue.
+
+### Component Owner Reference
+
+The following components and their owners may be relevant for bugs in the graphics and media areas. This is not an exhaustive list, but rather a reference for common components and their owners. Always refer to https://bugzilla.mozilla.org/page.cgi?id=triage_owners.html for the most up-to-date information on component ownership.
+
+| Component | Owner(s) |
+|-----------|----------|
+| Graphics | Bob Hood (bhood@mozilla.com) |
+| Graphics: Canvas2D | Lee Salzman (lsalzman@mozilla.com) |
+| Graphics: CanvasWebGL | Ashley Hale (ahale@mozilla.com) |
+| Graphics: Color Management | Ashley Hale (ahale@mozilla.com) |
+| Graphics: Image Blocking | Andrew Osmond (aosmond@mozilla.com) |
+| Graphics: ImageLib | Timothy Nikkel (tnikkel@mozilla.com) |
+| Graphics: Layers | Bob Hood (bhood@mozilla.com) |
+| Graphics: Text | Lee Salzman (lsalzman@mozilla.com), Jonathon Kew (jfkthame@gmail.com) |
+| Graphics: WebGPU | Jim Blandy (jimb@mozilla.com) |
+| Graphics: WebRender | Glenn Watson (glennw@mozilla.com) |
+| Web Painting | Timothy Nikkel (tnikkel@mozilla.com) |
+| Audio/Video | Jim Mathies (jmathies@mozilla.com) |
+| Audio/Video: cubeb | Karl Tomlinson (kthompson@mozilla.com) |
+| Audio/Video: GMP | Jim Mathies (jmathies@mozilla.com) |
+| Audio/Video: MediaStreamGraph | Karl Tomlinson (kthompson@mozilla.com) |
+| Audio/Video: Playback | Jim Mathies (jmathies@mozilla.com) |
+| Audio/Video: Recording | Karl Tomlinson (kthompson@mozilla.com) |
+| Audio/Video: Web Codecs | Paul Adenot (paul@paul.cx) |
+| WebRTC | Michael Froman (mfroman@mozilla.com) |
+| WebRTC: Audio/Video | Jan-Ivar Bruaoey (janivar@mozilla.com) |
+| WebRTC: Networking | Byron Campe (byronc@mozilla.com) |
+| WebRTC: Signaling | Nico Grunbaum (nico@mozilla.com) |
+
+---
+
 ## Data Processing Reference
 
 The following information may or may not be present in a bug, but when it is, it is useful for analysis.
