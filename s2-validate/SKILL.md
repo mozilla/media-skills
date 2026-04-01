@@ -216,6 +216,13 @@ The following components and their owners may be relevant for bugs in the graphi
 | WebRTC: Networking | Byron Campe (byronc@mozilla.com) |
 | WebRTC: Signaling | Nico Grunbaum (nico@mozilla.com) |
 
+### Component Reassignment
+
+If, based on the above list of components, a report appears to be misclassified (e.g. a media-related bug assigned to an unrelated component), suggest a reassignment to the correct component. This can help ensure that the bug is triaged and addressed by the appropriate team.
+
+When suggesting a component reassignment, provide a clear rationale for why the current component may not be appropriate and why the suggested component would be a better fit based on the information available in the bug report. For example:
+```The issue described in this bug appears to be related to media playback, but it is currently assigned to the "Graphics: Layers" component. Based on the description and any attached test cases, it seems more appropriate for this bug to be assigned to the "Audio/Video: Playback" component, which is responsible for media playback issues. I recommend reassigning this bug to "Audio/Video: Playback" to ensure it is triaged and addressed by the correct team.```
+
 ---
 
 ## Data Processing Reference
