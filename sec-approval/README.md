@@ -45,7 +45,7 @@ of the storage options below. The scripts check sources in this order:
 
 | Priority | Source | Notes |
 |---|---|---|
-| 1 | `BMO_API_KEY` env var | One-off / CI use |
+| 1 | `BMO_API_KEY` env var | One-off / ephemeral shell |
 | 2 | `~/.config/bugzilla/config.toml` | Recommended for daily use |
 | 3 | `~/.config/bmo-to-md/config.toml` | Reused if `bmo-to-md` is already configured |
 
