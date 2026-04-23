@@ -205,37 +205,157 @@ Triggers:
 - Scenario A: user asks Claude to submit.
 - Scenario D after a re-sanitization.
 
-This is a user-visible, hard-to-reverse action — always confirm before
-running any submit command.
+Two submit paths. Prefer **5a (moz-phab uplift)** unless the user has a
+concrete reason to fall back to raw-patch attachments. Either path is
+user-visible and hard-to-reverse — always confirm before running.
 
-- **Phabricator (preferred)**: show the exact `moz-phab submit` command,
-  confirm, then run. `<base>` is the merge-base with the target branch —
-  typically `origin/main` for Nightly-bound work, or the relevant
-  `origin/release`/`origin/esrNN` tip for direct-to-branch uplifts.
-  ```bash
-  moz-phab submit origin/main..HEAD
-  ```
-- **Raw patch** (when Phabricator isn't appropriate): generate with
-  `git format-patch` (or `jj` equivalent) and upload via the helper script.
-  The summary defaults to the patch Subject (with `[PATCH n/m]` stripped);
-  pass `--summary` to override. Always dry-run first.
-  ```bash
-  git format-patch -1 HEAD -o /tmp
-  python3 .claude/skills/uplift-request/bmo-uplift-request \
-      <bug_id> --attach /tmp/0001-*.patch --dry-run
-  # If the dry-run looks right, re-run without --dry-run.
-  ```
-  When re-submitting a sanitized version after Step 4 flagged the existing
-  attachment (scenario D), pass `--obsolete <old_attachment_id>` (repeatable)
-  so the stale patch is marked obsolete atomically with the upload. You can
-  also combine `--attach` with `--beta` / `--release` / `--esr NN` (and an
-  optional positional comment file) to upload the patch, post the uplift
-  form, and set approval flags in a single API call.
+Scenario B (user submits themselves later) — skip this step; just tell
+the user which commands to run when they are ready.
 
-After submission, re-list attachments to record the new IDs for Step 8.
+### 5a — moz-phab uplift (preferred)
 
-Scenario B (user submits themselves later) — skip this step; just tell the
-user which commands to run when they are ready.
+The moz-phab uplift flow creates a new Phabricator revision per target
+train, and a bot automatically adds Release Managers as reviewers when
+the lando uplift form is completed. Wiki:
+<https://wiki.mozilla.org/Release_Management/Requesting_an_Uplift#Requesting_Uplift_using_moz-phab>
+
+On path 5a the Step 7 answer file is **not** posted as a BMO comment —
+instead the user pastes its contents into the lando uplift form (URL
+printed at the end of each `moz-phab uplift` run). Skip Step 8 in that
+case.
+
+**Preflight (once per run):**
+
+1. `moz-phab uplift --list-trains` confirms train names (they begin
+   with `firefox-` and do not always match the branch name; e.g.
+   `firefox-esr140`, `firefox-esr115`, `firefox-beta`,
+   `firefox-release`).
+2. **Check whether each target branch already has the fix.** A Nightly
+   library uprev (libaom/libvpx/dav1d/etc.) often carries the upstream
+   fix across merge day — e.g. once Beta rotates forward, Beta may
+   already contain the patched file. Confirm before committing any
+   uplift work:
+   ```bash
+   git fetch upstream <target-branch>
+   # File check: does the target version still have the pre-fix marker?
+   git show upstream/<target-branch>:path/to/file \
+       | grep -c '<pre-fix-token>'
+   # History check: does the uprev bug already live on the branch?
+   git log --oneline upstream/<target-branch> -- path/to/file | head
+   ```
+   If the fix is already present, skip that channel entirely and tell
+   the user — the corresponding `approval-mozilla-*?` flag on any
+   pre-existing raw-patch attachment is now moot.
+
+**Per-channel flow:** for each channel that still needs the patch,
+
+1. Ensure the worktree is on `mozilla-firefox/firefox` and the target
+   tip is fetched (`upstream/beta`, `upstream/release`,
+   `upstream/esrNN`).
+2. Stash irrelevant working-tree modifications so only the uplift diff
+   is present:
+   ```bash
+   git stash push -m "uplift-tmp" -- <paths-to-stash>
+   ```
+3. Create a local branch off the target tip and commit the uplift
+   patch. Cherry-pick when the same diff applies verbatim; otherwise
+   `git apply` the prepared `.patch` file:
+   ```bash
+   git checkout -b bug-<bug_id>-<channel> upstream/<target-branch>
+   git cherry-pick <uplift-commit>
+   # OR
+   git apply /path/to/bug<bug_id>-uplift-<channel>.patch
+   git add <paths> && git commit -m "<sanitized subject>"
+   ```
+4. **Sanitized commit subject for sec-\* bugs.** The subject
+   propagates into the Phabricator revision title, bot notifications,
+   and CI logs — keep it maximally generic. Good: `Bug <id> -
+   Cherry-pick <library> fix`, `Bug <id> - Backport <library> patch`.
+   Avoid words that hint at the bug class: *thread-safety, race,
+   bounds, overflow, use-after-free, free, UAF, heap*, or specific
+   symbol/file names (`grain_synthesis.c`, `add_film_grain_run`,
+   etc.). Strip the commit body entirely.
+5. **Before the first `moz-phab uplift` of the run, ask the user**
+   whether they want WIP (Changes Planned) or not-WIP (Needs Review).
+   Reuse the answer for every subsequent channel in the same run.
+   - **WIP (default, safer)**: moz-phab submits as "Changes Planned".
+     Release Managers are **not** notified until the user completes
+     the lando uplift form (or flips WIP off explicitly). Use this
+     when the user still wants to eyeball the Phabricator revision
+     before it goes live.
+   - **Not-WIP**: pass `--no-wip` on the moz-phab command. The
+     revision is created in "Needs Review" immediately.
+6. Run `moz-phab uplift --train <train> <base-rev> <tip-rev>`,
+   appending `--no-wip` if the user asked for not-WIP:
+   ```bash
+   moz-phab uplift --train firefox-esr140 upstream/esr140 HEAD
+   # or:
+   moz-phab uplift --train firefox-esr140 --no-wip upstream/esr140 HEAD
+   ```
+   `--yes` skips interactive confirmation; `--no-rebase` is useful
+   when the patch has already been adapted for the target branch.
+7. **If the revision was submitted WIP and the user later wants to
+   flip it to Needs Review**, the local commit must first carry a
+   `Differential Revision: https://phabricator.services.mozilla.com/D<id>`
+   trailer so moz-phab knows which revision to update. The initial
+   `moz-phab uplift` run does **not** add that trailer to the local
+   commit. If you rerun `moz-phab uplift ... --no-wip` without first
+   amending the commit to add the trailer, moz-phab will create a
+   **new** revision instead of updating the existing one. Fix:
+   ```bash
+   git commit --amend -m "$(git log -1 --format=%s)
+
+   Differential Revision: https://phabricator.services.mozilla.com/D<id>"
+   moz-phab uplift --train <train> --no-wip --no-rebase --yes \
+       upstream/<target-branch> HEAD
+   # If a duplicate got created first, abandon it:
+   moz-phab abandon D<duplicate-id> --yes
+   ```
+8. Open the lando URL printed at the end of the run
+   (`https://lando.moz.tools/uplift/request/?revisions=<rev-id>`) and
+   paste the Step 7 answer file into the nine-question uplift form —
+   completing the form is what actually sends the request to Release
+   Managers. Do this whether the revision was submitted WIP or
+   not-WIP; the lando form is a separate step from the moz-phab
+   submission.
+
+**Reusing one worktree for several channels.** Fine — just create a
+fresh `bug-<bug_id>-<channel>` branch off each target tip. Cherry-pick
+from the first channel's branch. Between channels, the stash and any
+untracked files ride along.
+
+**Sec-\* bug visibility.** `moz-phab uplift` inherits the bug's
+Phabricator security group — revisions created from a
+media-core-security (or similar) bug are "secure" and visible only to
+that group, matching the existing Phabricator attachments. Verify
+this on the first revision you create before proceeding to the rest.
+
+### 5b — Raw patch + BMO approval flags (fallback)
+
+Use when moz-phab uplift isn't applicable — e.g. the bug predates
+moz-phab uplift support, or the patch only exists as a text file and
+the user doesn't want to turn it into a Phabricator revision. Upload
+via the helper script; it can set approval flags and post the Step 7
+comment in the same API call.
+
+```bash
+git format-patch -1 HEAD -o /tmp
+python3 .claude/skills/uplift-request/bmo-uplift-request \
+    <bug_id> --attach /tmp/0001-*.patch --dry-run
+# If the dry-run looks right, re-run without --dry-run.
+```
+
+The summary defaults to the patch Subject (with `[PATCH n/m]`
+stripped); pass `--summary` to override. When re-submitting a
+sanitized version after Step 4 flagged the existing attachment
+(scenario D), pass `--obsolete <old_attachment_id>` (repeatable) so
+the stale patch is marked obsolete atomically with the upload. Combine
+`--attach` with `--beta` / `--release` / `--esr NN` (and an optional
+positional comment file) to upload the patch, post the uplift form,
+and set approval flags in a single API call.
+
+After submission, re-list attachments to record the new IDs for
+Step 8.
 
 ---
 
@@ -331,9 +451,22 @@ rebased variant. When the request covers multiple distinct patches,
 concatenate one block per patch separated by a single blank line. Use the
 `Write` tool, then tell the user the file path.
 
+**Once the answer file exists, remind the user what to do with it:**
+
+- If path 5a (moz-phab uplift) is in use — or will be in use — tell
+  the user to paste the relevant block from this file into the lando
+  uplift form at the URL `moz-phab uplift` prints
+  (`https://lando.moz.tools/uplift/request/?revisions=<rev-id>`) for
+  each revision. Mention it explicitly, per channel — this is the
+  step that replaces a Bugzilla comment in the moz-phab flow and it
+  is easy to forget.
+- If path 5b (raw-patch + BMO flags) is in use, Step 8 posts the
+  file contents as a Bugzilla comment automatically; no manual
+  paste needed.
+
 ---
 
-## Step 8 — Post to Bugzilla (optional)
+## Step 8 — Post to Bugzilla (only for path 5b; skip for path 5a)
 
 Ask the user whether to post. Always dry-run first.
 
