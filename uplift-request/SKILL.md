@@ -318,6 +318,24 @@ case.
    Managers. Do this whether the revision was submitted WIP or
    not-WIP; the lando form is a separate step from the moz-phab
    submission.
+9. **After the user submits the lando form, verify — don't
+   duplicate — the approval flag on the resulting attachment.**
+   Lando creates a new Phabricator attachment on the bug (a secure
+   one, for sec-\* bugs) and automatically sets the correct
+   `approval-mozilla-<train>?` flag on it. Re-list attachments and
+   confirm:
+   ```bash
+   python3 .claude/skills/uplift-request/bmo-uplift-request \
+       <bug_id> --list
+   ```
+   Expect a new Phab attachment with the appropriate flag already
+   present (e.g., `approval-mozilla-esr140?` after submitting the
+   firefox-esr140 lando form). Do **not** set the flag a second time
+   via `bmo-uplift-request` — that's 5b's job; in 5a Lando owns the
+   flag. If the expected flag is missing, confirm the user actually
+   clicked submit on the lando form (it's easy to close the tab
+   early), then fall back to `bmo-uplift-request --attachment <id>
+   --<channel>` to set it manually.
 
 **Reusing one worktree for several channels.** Fine — just create a
 fresh `bug-<bug_id>-<channel>` branch off each target tip. Cherry-pick
